@@ -32,6 +32,9 @@ turnout_variable_choices <- c(
 )
 
 ui <- fluidPage(
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "https://s3.amazonaws.com/kansas-voting-data/styles.css")
+  ),
 
   navbarPage(title = "Kansas Voting Data", windowTitle = "Kansas Voting Data",
     tabPanel("Election Results",
