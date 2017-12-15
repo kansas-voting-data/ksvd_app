@@ -1,0 +1,153 @@
+"congressional","Variable","col","Value"
+"District 1","Cash Assistance/SNAP","With",26039
+"District 2","Cash Assistance/SNAP","With",31421
+"District 3","Cash Assistance/SNAP","With",21126
+"District 4","Cash Assistance/SNAP","With",33243
+"District 1","Cash Assistance/SNAP","Without",251311
+"District 2","Cash Assistance/SNAP","Without",246006
+"District 3","Cash Assistance/SNAP","Without",261945
+"District 4","Cash Assistance/SNAP","Without",242381
+"District 1","Citizen","Born Abroad",6087
+"District 2","Citizen","Born Abroad",4867
+"District 3","Citizen","Born Abroad",5081
+"District 4","Citizen","Born Abroad",5172
+"District 1","Citizen","Naturalized",16352
+"District 2","Citizen","Naturalized",8420
+"District 3","Citizen","Naturalized",25284
+"District 4","Citizen","Naturalized",21788
+"District 1","Citizen","U.S. Born",656874
+"District 2","Citizen","U.S. Born",684739
+"District 3","Citizen","U.S. Born",662307
+"District 4","Citizen","U.S. Born",664294
+"District 1","Citizen","U.S. Islands",1036
+"District 2","Citizen","U.S. Islands",849
+"District 3","Citizen","U.S. Islands",644
+"District 4","Citizen","U.S. Islands",755
+"District 1","Citizen","Not",38400
+"District 2","Citizen","Not",15625
+"District 3","Citizen","Not",46248
+"District 4","Citizen","Not",28165
+"District 1","Disability","Yes",85462
+"District 2","Disability","Yes",102387
+"District 3","Disability","Yes",74314
+"District 4","Disability","Yes",88782
+"District 1","Disability","No",607510
+"District 2","Disability","No",596234
+"District 3","Disability","No",659686
+"District 4","Disability","No",619497
+"District 1","Education","Less than 9th Grade",27107
+"District 2","Education","Less than 9th Grade",14153
+"District 3","Education","Less than 9th Grade",17149
+"District 4","Education","Less than 9th Grade",18306
+"District 1","Education","9th to 12th Grade, No Diploma",40476
+"District 2","Education","9th to 12th Grade, No Diploma",34050
+"District 3","Education","9th to 12th Grade, No Diploma",29402
+"District 4","Education","9th to 12th Grade, No Diploma",40507
+"District 1","Education","High School Diploma or Equivalent",159884
+"District 2","Education","High School Diploma or Equivalent",167469
+"District 3","Education","High School Diploma or Equivalent",109052
+"District 4","Education","High School Diploma or Equivalent",149793
+"District 1","Education","Some College, No Degree",158068
+"District 2","Education","Some College, No Degree",155414
+"District 3","Education","Some College, No Degree",123617
+"District 4","Education","Some College, No Degree",149186
+"District 1","Education","Associate's Degree",44837
+"District 2","Education","Associate's Degree",42430
+"District 3","Education","Associate's Degree",39588
+"District 4","Education","Associate's Degree",40715
+"District 1","Education","Bachelor's Degree",76367
+"District 2","Education","Bachelor's Degree",84968
+"District 3","Education","Bachelor's Degree",147563
+"District 4","Education","Bachelor's Degree",91485
+"District 1","Education","Graduate or Professional Degree",36436
+"District 2","Education","Graduate or Professional Degree",49571
+"District 3","Education","Graduate or Professional Degree",79337
+"District 4","Education","Graduate or Professional Degree",42540
+"District 1","Voting Age Population (Gender)","Male",274236
+"District 2","Voting Age Population (Gender)","Male",270555
+"District 3","Voting Age Population (Gender)","Male",263634
+"District 4","Voting Age Population (Gender)","Male",261655
+"District 1","Voting Age Population (Gender)","Female",268939
+"District 2","Voting Age Population (Gender)","Female",277500
+"District 3","Voting Age Population (Gender)","Female",282074
+"District 4","Voting Age Population (Gender)","Female",270877
+"District 1","Voting Age Population (Citizenship)","Citizen",508285
+"District 2","Voting Age Population (Citizenship)","Citizen",533642
+"District 3","Voting Age Population (Citizenship)","Citizen",504788
+"District 4","Voting Age Population (Citizenship)","Citizen",507204
+"District 1","Voting Age Population (Citizenship)","Not Citizen",34890
+"District 2","Voting Age Population (Citizenship)","Not Citizen",14413
+"District 3","Voting Age Population (Citizenship)","Not Citizen",40920
+"District 4","Voting Age Population (Citizenship)","Not Citizen",25328
+"District 1","Voting Age Population (Race)","Asian",9264
+"District 2","Voting Age Population (Race)","Asian",8367
+"District 3","Voting Age Population (Race)","Asian",22553
+"District 4","Voting Age Population (Race)","Asian",17445
+"District 1","Voting Age Population (Race)","Black/African-American",16466
+"District 2","Voting Age Population (Race)","Black/African-American",24402
+"District 3","Voting Age Population (Race)","Black/African-American",46306
+"District 4","Voting Age Population (Race)","Black/African-American",34867
+"District 1","Voting Age Population (Race)","Hispanic or Latino/a",66205
+"District 2","Voting Age Population (Race)","Hispanic or Latino/a",27495
+"District 3","Voting Age Population (Race)","Hispanic or Latino/a",52173
+"District 4","Voting Age Population (Race)","Hispanic or Latino/a",49149
+"District 1","Voting Age Population (Race)","Multiracial",9936
+"District 2","Voting Age Population (Race)","Multiracial",15102
+"District 3","Voting Age Population (Race)","Multiracial",9807
+"District 4","Voting Age Population (Race)","Multiracial",11759
+"District 1","Voting Age Population (Race)","Native American/American Indian",3096
+"District 2","Voting Age Population (Race)","Native American/American Indian",7540
+"District 3","Voting Age Population (Race)","Native American/American Indian",1980
+"District 4","Voting Age Population (Race)","Native American/American Indian",5008
+"District 1","Voting Age Population (Race)","Pacific Islander",544
+"District 2","Voting Age Population (Race)","Pacific Islander",304
+"District 3","Voting Age Population (Race)","Pacific Islander",259
+"District 4","Voting Age Population (Race)","Pacific Islander",253
+"District 1","Voting Age Population (Race)","White/European-American",441238
+"District 2","Voting Age Population (Race)","White/European-American",467606
+"District 3","Voting Age Population (Race)","White/European-American",414821
+"District 4","Voting Age Population (Race)","White/European-American",416766
+"District 1","Voting Age Population (Race)","Other Race",17889
+"District 2","Voting Age Population (Race)","Other Race",4761
+"District 3","Voting Age Population (Race)","Other Race",11090
+"District 4","Voting Age Population (Race)","Other Race",8966
+"District 1","Health Insurance","With",615175
+"District 2","Health Insurance","With",623110
+"District 3","Health Insurance","With",656827
+"District 4","Health Insurance","With",620641
+"District 1","Health Insurance","Without",77797
+"District 2","Health Insurance","Without",75511
+"District 3","Health Insurance","Without",77173
+"District 4","Health Insurance","Without",87638
+"District 1","Language at Home","English Only",573846
+"District 2","Language at Home","English Only",632112
+"District 3","Language at Home","English Only",590181
+"District 4","Language at Home","English Only",591759
+"District 1","Language at Home","Spanish, Always or Sometimes",73278
+"District 2","Language at Home","Spanish, Always or Sometimes",21695
+"District 3","Language at Home","Spanish, Always or Sometimes",56770
+"District 4","Language at Home","Spanish, Always or Sometimes",50205
+"District 1","Language at Home","Asian/Pacific, Always or Sometimes",8893
+"District 2","Language at Home","Asian/Pacific, Always or Sometimes",7156
+"District 3","Language at Home","Asian/Pacific, Always or Sometimes",18069
+"District 4","Language at Home","Asian/Pacific, Always or Sometimes",15743
+"District 1","Language at Home","Other Indo-European, Always or Sometimes",8500
+"District 2","Language at Home","Other Indo-European, Always or Sometimes",6767
+"District 3","Language at Home","Other Indo-European, Always or Sometimes",15101
+"District 4","Language at Home","Other Indo-European, Always or Sometimes",7048
+"District 1","Language at Home","Other, Always or Sometimes",2525
+"District 2","Language at Home","Other, Always or Sometimes",2566
+"District 3","Language at Home","Other, Always or Sometimes",6562
+"District 4","Language at Home","Other, Always or Sometimes",3491
+"District 1","Poverty","Below 100% of Poverty Level",98247
+"District 2","Poverty","Below 100% of Poverty Level",107800
+"District 3","Poverty","Below 100% of Poverty Level",73073
+"District 4","Poverty","Below 100% of Poverty Level",102233
+"District 1","Poverty","100% to 149% of Poverty Level",74237
+"District 2","Poverty","100% to 149% of Poverty Level",62911
+"District 3","Poverty","100% to 149% of Poverty Level",48410
+"District 4","Poverty","100% to 149% of Poverty Level",69414
+"District 1","Poverty","150% or Above Poverty Level",516260
+"District 2","Poverty","150% or Above Poverty Level",514069
+"District 3","Poverty","150% or Above Poverty Level",610078
+"District 4","Poverty","150% or Above Poverty Level",533490

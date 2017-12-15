@@ -1,0 +1,191 @@
+year,Variable,col,Value
+2012,Cash Assistance/SNAP,With,0.10429827876733419
+2013,Cash Assistance/SNAP,With,0.10813492330719592
+2014,Cash Assistance/SNAP,With,0.10151720034617048
+2015,Cash Assistance/SNAP,With,0.08948237736847124
+2016,Cash Assistance/SNAP,With,0.08458790335435566
+2012,Cash Assistance/SNAP,Without,0.8957017212326658
+2013,Cash Assistance/SNAP,Without,0.8918650766928041
+2014,Cash Assistance/SNAP,Without,0.8984827996538295
+2015,Cash Assistance/SNAP,Without,0.9105176226315288
+2016,Cash Assistance/SNAP,Without,0.9154120966456444
+2012,Citizen,Born Abroad,0.007343277065599872
+2013,Citizen,Born Abroad,0.006608944085900378
+2014,Citizen,Born Abroad,0.007608760404969523
+2015,Citizen,Born Abroad,0.007480661249103169
+2016,Citizen,Born Abroad,0.007993357385523077
+2012,Citizen,Naturalized,0.023540968950814388
+2013,Citizen,Naturalized,0.023099859465776442
+2014,Citizen,Naturalized,0.026647190223486675
+2015,Citizen,Naturalized,0.02648334736322232
+2016,Citizen,Naturalized,0.02794906182357516
+2012,Citizen,U.S. Born,0.9267699387193965
+2013,Citizen,U.S. Born,0.9240541583720836
+2014,Citizen,U.S. Born,0.9207729558429502
+2015,Citizen,U.S. Born,0.9205135523232432
+2016,Citizen,U.S. Born,0.9201211162701747
+2012,Citizen,U.S. Islands,0.001152844601606775
+2013,Citizen,U.S. Islands,8.586858754293861e-4
+2014,Citizen,U.S. Islands,0.0012262308020499853
+2015,Citizen,U.S. Islands,0.001351471558478535
+2016,Citizen,U.S. Islands,0.0011935517934405558
+2012,Citizen,Not,0.04119297066258245
+2013,Citizen,Not,0.04537835220081017
+2014,Citizen,Not,0.04374486272654365
+2015,Citizen,Not,0.04417096750595283
+2016,Citizen,Not,0.04274291272728649
+2012,Disability,Yes,0.11955195270360187
+2013,Disability,Yes,0.1236521026124066
+2014,Disability,Yes,0.12876614791380095
+2015,Disability,Yes,0.1283447695374188
+2016,Disability,Yes,0.128114233519546
+2012,Disability,No,0.8804480472963981
+2013,Disability,No,0.8763478973875934
+2014,Disability,No,0.8712338520861991
+2015,Disability,No,0.8716552304625812
+2016,Disability,No,0.871885766480454
+2012,Education,Less than 9th Grade,0.033773932518659094
+2013,Education,Less than 9th Grade,0.03617164692431036
+2014,Education,Less than 9th Grade,0.03557817572405472
+2015,Education,Less than 9th Grade,0.03493417699222463
+2016,Education,Less than 9th Grade,0.03346880316734858
+2012,Education,"9th to 12th Grade, No Diploma",0.06973161208299994
+2013,Education,"9th to 12th Grade, No Diploma",0.06750758598794984
+2014,Education,"9th to 12th Grade, No Diploma",0.06577894270728762
+2015,Education,"9th to 12th Grade, No Diploma",0.0661629720083946
+2016,Education,"9th to 12th Grade, No Diploma",0.06526179431391599
+2012,Education,High School Diploma or Equivalent,0.2743154943944179
+2013,Education,High School Diploma or Equivalent,0.2654076648960277
+2014,Education,High School Diploma or Equivalent,0.2660224410896186
+2015,Education,High School Diploma or Equivalent,0.26973811802189185
+2016,Education,High School Diploma or Equivalent,0.26565132710263323
+2012,Education,"Some College, No Degree",0.2729535975696517
+2013,Education,"Some College, No Degree",0.27248086536625543
+2014,Education,"Some College, No Degree",0.26707399472114574
+2015,Education,"Some College, No Degree",0.2627686230809704
+2016,Education,"Some College, No Degree",0.2578269179016316
+2012,Education,Associate's Degree,0.07641682543143671
+2013,Education,Associate's Degree,0.07778956158855994
+2014,Education,Associate's Degree,0.07955319513699993
+2015,Education,Associate's Degree,0.08069153744603352
+2016,Education,Associate's Degree,0.08019221208098998
+2012,Education,Bachelor's Degree,0.178097114146172
+2013,Education,Bachelor's Degree,0.18434813415753548
+2014,Education,Bachelor's Degree,0.18785084257224505
+2015,Education,Bachelor's Degree,0.18704238874841597
+2016,Education,Bachelor's Degree,0.19142069997308847
+2012,Education,Graduate or Professional Degree,0.09471142385666267
+2013,Education,Graduate or Professional Degree,0.09629454107936128
+2014,Education,Graduate or Professional Degree,0.09814240804864834
+2015,Education,Graduate or Professional Degree,0.09866218370206904
+2016,Education,Graduate or Professional Degree,0.10617824546039217
+2012,Voting Age Population (Gender),Male,0.49312630160932963
+2013,Voting Age Population (Gender),Male,0.49272780393988264
+2014,Voting Age Population (Gender),Male,0.4930535118865899
+2015,Voting Age Population (Gender),Male,0.4937120306725314
+2016,Voting Age Population (Gender),Male,0.4931571769363748
+2012,Voting Age Population (Gender),Female,0.5068736983906703
+2013,Voting Age Population (Gender),Female,0.5072721960601174
+2014,Voting Age Population (Gender),Female,0.5069464881134101
+2015,Voting Age Population (Gender),Female,0.5062879693274686
+2016,Voting Age Population (Gender),Female,0.5068428230636252
+2012,Voting Age Population (Citizenship),Citizen,0.9499350465761323
+2013,Voting Age Population (Citizenship),Citizen,0.9463379060142678
+2014,Voting Age Population (Citizenship),Citizen,0.9478069101833847
+2015,Voting Age Population (Citizenship),Citizen,0.9464704639530676
+2016,Voting Age Population (Citizenship),Citizen,0.9477921153819839
+2012,Voting Age Population (Citizenship),Not Citizen,0.05006495342386775
+2013,Voting Age Population (Citizenship),Not Citizen,0.05366209398573213
+2014,Voting Age Population (Citizenship),Not Citizen,0.05219308981661528
+2015,Voting Age Population (Citizenship),Not Citizen,0.053529536046932405
+2016,Voting Age Population (Citizenship),Not Citizen,0.05220788461801612
+2012,Voting Age Population (Race),Asian,NA
+2013,Voting Age Population (Race),Asian,NA
+2014,Voting Age Population (Race),Asian,NA
+2015,Voting Age Population (Race),Asian,NA
+2016,Voting Age Population (Race),Asian,NA
+2012,Voting Age Population (Race),Black/African-American,NA
+2013,Voting Age Population (Race),Black/African-American,NA
+2014,Voting Age Population (Race),Black/African-American,NA
+2015,Voting Age Population (Race),Black/African-American,NA
+2016,Voting Age Population (Race),Black/African-American,NA
+2012,Voting Age Population (Race),Hispanic or Latino/a,NA
+2013,Voting Age Population (Race),Hispanic or Latino/a,NA
+2014,Voting Age Population (Race),Hispanic or Latino/a,NA
+2015,Voting Age Population (Race),Hispanic or Latino/a,NA
+2016,Voting Age Population (Race),Hispanic or Latino/a,NA
+2012,Voting Age Population (Race),Multiracial,NA
+2013,Voting Age Population (Race),Multiracial,NA
+2014,Voting Age Population (Race),Multiracial,NA
+2015,Voting Age Population (Race),Multiracial,NA
+2016,Voting Age Population (Race),Multiracial,NA
+2012,Voting Age Population (Race),Native American/American Indian,NA
+2013,Voting Age Population (Race),Native American/American Indian,NA
+2014,Voting Age Population (Race),Native American/American Indian,NA
+2015,Voting Age Population (Race),Native American/American Indian,NA
+2016,Voting Age Population (Race),Native American/American Indian,NA
+2012,Voting Age Population (Race),Pacific Islander,NA
+2013,Voting Age Population (Race),Pacific Islander,NA
+2014,Voting Age Population (Race),Pacific Islander,NA
+2015,Voting Age Population (Race),Pacific Islander,NA
+2016,Voting Age Population (Race),Pacific Islander,NA
+2012,Voting Age Population (Race),White/European-American,NA
+2013,Voting Age Population (Race),White/European-American,NA
+2014,Voting Age Population (Race),White/European-American,NA
+2015,Voting Age Population (Race),White/European-American,NA
+2016,Voting Age Population (Race),White/European-American,NA
+2012,Voting Age Population (Race),Other Race,NA
+2013,Voting Age Population (Race),Other Race,NA
+2014,Voting Age Population (Race),Other Race,NA
+2015,Voting Age Population (Race),Other Race,NA
+2016,Voting Age Population (Race),Other Race,NA
+2012,Health Insurance,With,0.8741551686548105
+2013,Health Insurance,With,0.8772894734893978
+2014,Health Insurance,With,0.897563588286274
+2015,Health Insurance,With,0.9085987834362925
+2016,Health Insurance,With,0.9126671161213696
+2012,Health Insurance,Without,0.12584483134518953
+2013,Health Insurance,Without,0.12271052651060216
+2014,Health Insurance,Without,0.10243641171372601
+2015,Health Insurance,Without,0.0914012165637075
+2016,Health Insurance,Without,0.08733288387863039
+2012,Language at Home,English Only,0.8881261112458358
+2013,Language at Home,English Only,0.8914750804649059
+2014,Language at Home,English Only,0.8872174196289163
+2015,Language at Home,English Only,0.8824537911091055
+2016,Language at Home,English Only,0.8834248563498867
+2012,Language at Home,"Spanish, Always or Sometimes",0.07507728664731847
+2013,Language at Home,"Spanish, Always or Sometimes",0.07224715018965336
+2014,Language at Home,"Spanish, Always or Sometimes",0.07531705311510856
+2015,Language at Home,"Spanish, Always or Sometimes",0.07650958253133548
+2016,Language at Home,"Spanish, Always or Sometimes",0.07778453903729424
+2012,Language at Home,"Asian/Pacific, Always or Sometimes",0.01795091576155891
+2013,Language at Home,"Asian/Pacific, Always or Sometimes",0.017181433008257464
+2014,Language at Home,"Asian/Pacific, Always or Sometimes",0.018594854165364907
+2015,Language at Home,"Asian/Pacific, Always or Sometimes",0.019946768831216672
+2016,Language at Home,"Asian/Pacific, Always or Sometimes",0.018483823840365062
+2012,Language at Home,"Other Indo-European, Always or Sometimes",0.014412437087607427
+2013,Language at Home,"Other Indo-European, Always or Sometimes",0.013262932184589259
+2014,Language at Home,"Other Indo-European, Always or Sometimes",0.013079215121384359
+2015,Language at Home,"Other Indo-European, Always or Sometimes",0.014701380510761353
+2016,Language at Home,"Other Indo-European, Always or Sometimes",0.015974859431200535
+2012,Language at Home,"Other, Always or Sometimes",0.004433249257679401
+2013,Language at Home,"Other, Always or Sometimes",0.0058334041525940445
+2014,Language at Home,"Other, Always or Sometimes",0.005791457969225855
+2015,Language at Home,"Other, Always or Sometimes",0.006388477017581021
+2016,Language at Home,"Other, Always or Sometimes",0.0043319213412534785
+2012,Poverty,Below 100% of Poverty Level,0.13979481173232383
+2013,Poverty,Below 100% of Poverty Level,0.13989932148341835
+2014,Poverty,Below 100% of Poverty Level,0.1356446427362569
+2015,Poverty,Below 100% of Poverty Level,0.1303025175710002
+2016,Poverty,Below 100% of Poverty Level,0.12121744004665476
+2012,Poverty,100% to 149% of Poverty Level,0.09589691268346699
+2013,Poverty,100% to 149% of Poverty Level,0.08851657454044176
+2014,Poverty,100% to 149% of Poverty Level,0.09015673252331884
+2015,Poverty,100% to 149% of Poverty Level,0.08852597879929056
+2016,Poverty,100% to 149% of Poverty Level,0.09196231665784341
+2012,Poverty,150% or Above Poverty Level,0.7643082755842091
+2013,Poverty,150% or Above Poverty Level,0.7715841039761399
+2014,Poverty,150% or Above Poverty Level,0.7741986247404242
+2015,Poverty,150% or Above Poverty Level,0.7811715036297092
+2016,Poverty,150% or Above Poverty Level,0.7868202432955018

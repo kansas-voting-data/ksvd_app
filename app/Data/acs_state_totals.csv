@@ -1,0 +1,191 @@
+year,Variable,col,Value
+2012,Cash Assistance/SNAP,With,116179
+2013,Cash Assistance/SNAP,With,120433
+2014,Cash Assistance/SNAP,With,112611
+2015,Cash Assistance/SNAP,With,99467
+2016,Cash Assistance/SNAP,With,93927
+2012,Cash Assistance/SNAP,Without,997732
+2013,Cash Assistance/SNAP,Without,993296
+2014,Cash Assistance/SNAP,Without,996669
+2015,Cash Assistance/SNAP,Without,1012115
+2016,Cash Assistance/SNAP,Without,1016480
+2012,Citizen,Born Abroad,21192
+2013,Citizen,Born Abroad,19126
+2014,Citizen,Born Abroad,22096
+2015,Citizen,Born Abroad,21781
+2016,Citizen,Born Abroad,23239
+2012,Citizen,Naturalized,67937
+2013,Citizen,Naturalized,66850
+2014,Citizen,Naturalized,77384
+2015,Citizen,Naturalized,77110
+2016,Citizen,Naturalized,81256
+2012,Citizen,U.S. Born,2674570
+2013,Citizen,U.S. Born,2674173
+2014,Citizen,U.S. Born,2673944
+2015,Citizen,U.S. Born,2680205
+2016,Citizen,U.S. Born,2675058
+2012,Citizen,U.S. Islands,3327
+2013,Citizen,U.S. Islands,2485
+2014,Citizen,U.S. Islands,3561
+2015,Citizen,U.S. Islands,3935
+2016,Citizen,U.S. Islands,3470
+2012,Citizen,Not,118879
+2013,Citizen,Not,131323
+2014,Citizen,Not,127036
+2015,Citizen,Not,128610
+2016,Citizen,Not,124266
+2012,Disability,Yes,337784
+2013,Disability,Yes,350768
+2014,Disability,Yes,366393
+2015,Disability,Yes,365803
+2016,Disability,Yes,365236
+2012,Disability,No,2487632
+2013,Disability,No,2485965
+2014,Disability,No,2479021
+2015,Disability,No,2484356
+2016,Disability,No,2485626
+2012,Education,Less than 9th Grade,73108
+2013,Education,Less than 9th Grade,78616
+2014,Education,Less than 9th Grade,77615
+2015,Education,Less than 9th Grade,76555
+2016,Education,Less than 9th Grade,73376
+2012,Education,"9th to 12th Grade, No Diploma",150943
+2013,Education,"9th to 12th Grade, No Diploma",146722
+2014,Education,"9th to 12th Grade, No Diploma",143499
+2015,Education,"9th to 12th Grade, No Diploma",144990
+2016,Education,"9th to 12th Grade, No Diploma",143078
+2012,Education,High School Diploma or Equivalent,593791
+2013,Education,High School Diploma or Equivalent,576841
+2014,Education,High School Diploma or Equivalent,580337
+2015,Education,High School Diploma or Equivalent,591106
+2016,Education,High School Diploma or Equivalent,582406
+2012,Education,"Some College, No Degree",590843
+2013,Education,"Some College, No Degree",592214
+2014,Education,"Some College, No Degree",582631
+2015,Education,"Some College, No Degree",575833
+2016,Education,"Some College, No Degree",565252
+2012,Education,Associate's Degree,165414
+2013,Education,Associate's Degree,169069
+2014,Education,Associate's Degree,173548
+2015,Education,Associate's Degree,176828
+2016,Education,Associate's Degree,175811
+2012,Education,Bachelor's Degree,385514
+2013,Education,Bachelor's Degree,400665
+2014,Education,Bachelor's Degree,409803
+2015,Education,Bachelor's Degree,409886
+2016,Education,Bachelor's Degree,419665
+2012,Education,Graduate or Professional Degree,205015
+2013,Education,Graduate or Professional Degree,209288
+2014,Education,Graduate or Professional Degree,214101
+2015,Education,Graduate or Professional Degree,216209
+2016,Education,Graduate or Professional Degree,232782
+2012,Voting Age Population (Gender),Male,1067435
+2013,Voting Age Population (Gender),Male,1070902
+2014,Voting Age Population (Gender),Male,1075613
+2015,Voting Age Population (Gender),Male,1081924
+2016,Voting Age Population (Gender),Male,1081183
+2012,Voting Age Population (Gender),Female,1097193
+2013,Voting Age Population (Gender),Female,1102513
+2014,Voting Age Population (Gender),Female,1105921
+2015,Voting Age Population (Gender),Female,1109483
+2016,Voting Age Population (Gender),Female,1111187
+2012,Voting Age Population (Citizenship),Citizen,2056256
+2013,Voting Age Population (Citizenship),Citizen,2056785
+2014,Voting Age Population (Citizenship),Citizen,2067673
+2015,Voting Age Population (Citizenship),Citizen,2074102
+2016,Voting Age Population (Citizenship),Citizen,2077911
+2012,Voting Age Population (Citizenship),Not Citizen,108372
+2013,Voting Age Population (Citizenship),Not Citizen,116630
+2014,Voting Age Population (Citizenship),Not Citizen,113861
+2015,Voting Age Population (Citizenship),Not Citizen,117305
+2016,Voting Age Population (Citizenship),Not Citizen,114459
+2012,Voting Age Population (Race),Asian,54630
+2013,Voting Age Population (Race),Asian,55873
+2014,Voting Age Population (Race),Asian,58666
+2015,Voting Age Population (Race),Asian,63688
+2016,Voting Age Population (Race),Asian,63196
+2012,Voting Age Population (Race),Black/African-American,120687
+2013,Voting Age Population (Race),Black/African-American,122140
+2014,Voting Age Population (Race),Black/African-American,124222
+2015,Voting Age Population (Race),Black/African-American,125317
+2016,Voting Age Population (Race),Black/African-American,123273
+2012,Voting Age Population (Race),Hispanic or Latino/a,190422
+2013,Voting Age Population (Race),Hispanic or Latino/a,194762
+2014,Voting Age Population (Race),Hispanic or Latino/a,199103
+2015,Voting Age Population (Race),Hispanic or Latino/a,205614
+2016,Voting Age Population (Race),Hispanic or Latino/a,207947
+2012,Voting Age Population (Race),Multiracial,45973
+2013,Voting Age Population (Race),Multiracial,48841
+2014,Voting Age Population (Race),Multiracial,50485
+2015,Voting Age Population (Race),Multiracial,44574
+2016,Voting Age Population (Race),Multiracial,49636
+2012,Voting Age Population (Race),Native American/American Indian,18509
+2013,Voting Age Population (Race),Native American/American Indian,18839
+2014,Voting Age Population (Race),Native American/American Indian,18273
+2015,Voting Age Population (Race),Native American/American Indian,20891
+2016,Voting Age Population (Race),Native American/American Indian,16342
+2012,Voting Age Population (Race),Pacific Islander,NA
+2013,Voting Age Population (Race),Pacific Islander,NA
+2014,Voting Age Population (Race),Pacific Islander,NA
+2015,Voting Age Population (Race),Pacific Islander,NA
+2016,Voting Age Population (Race),Pacific Islander,NA
+2012,Voting Age Population (Race),White/European-American,1743806
+2013,Voting Age Population (Race),White/European-American,1741944
+2014,Voting Age Population (Race),White/European-American,1742548
+2015,Voting Age Population (Race),White/European-American,1742780
+2016,Voting Age Population (Race),White/European-American,1739474
+2012,Voting Age Population (Race),Other Race,39501
+2013,Voting Age Population (Race),Other Race,36822
+2014,Voting Age Population (Race),Other Race,41532
+2015,Voting Age Population (Race),Other Race,46108
+2016,Voting Age Population (Race),Other Race,49044
+2012,Health Insurance,With,2469852
+2013,Health Insurance,With,2488636
+2014,Health Insurance,With,2553940
+2015,Health Insurance,With,2589651
+2016,Health Insurance,With,2601888
+2012,Health Insurance,Without,355564
+2013,Health Insurance,Without,348097
+2014,Health Insurance,Without,291474
+2015,Health Insurance,Without,260508
+2016,Health Insurance,Without,248974
+2012,Language at Home,English Only,2384163
+2013,Language at Home,English Only,2402216
+2014,Language at Home,English Only,2399633
+2015,Language at Home,English Only,2395487
+2016,Language at Home,English Only,2393978
+2012,Language at Home,"Spanish, Always or Sometimes",201544
+2013,Language at Home,"Spanish, Always or Sometimes",194681
+2014,Language at Home,"Spanish, Always or Sometimes",203708
+2015,Language at Home,"Spanish, Always or Sometimes",207691
+2016,Language at Home,"Spanish, Always or Sometimes",210787
+2012,Language at Home,"Asian/Pacific, Always or Sometimes",48189
+2013,Language at Home,"Asian/Pacific, Always or Sometimes",46298
+2014,Language at Home,"Asian/Pacific, Always or Sometimes",50293
+2015,Language at Home,"Asian/Pacific, Always or Sometimes",54147
+2016,Language at Home,"Asian/Pacific, Always or Sometimes",50089
+2012,Language at Home,"Other Indo-European, Always or Sometimes",38690
+2013,Language at Home,"Other Indo-European, Always or Sometimes",35739
+2014,Language at Home,"Other Indo-European, Always or Sometimes",35375
+2015,Language at Home,"Other Indo-European, Always or Sometimes",39908
+2016,Language at Home,"Other Indo-European, Always or Sometimes",43290
+2012,Language at Home,"Other, Always or Sometimes",11901
+2013,Language at Home,"Other, Always or Sometimes",15719
+2014,Language at Home,"Other, Always or Sometimes",15664
+2015,Language at Home,"Other, Always or Sometimes",17342
+2016,Language at Home,"Other, Always or Sometimes",11739
+2012,Poverty,Below 100% of Poverty Level,391734
+2013,Poverty,Below 100% of Poverty Level,393358
+2014,Poverty,Below 100% of Poverty Level,382712
+2015,Poverty,Below 100% of Poverty Level,368879
+2016,Poverty,Below 100% of Poverty Level,342544
+2012,Poverty,100% to 149% of Poverty Level,268723
+2013,Poverty,100% to 149% of Poverty Level,248884
+2014,Poverty,100% to 149% of Poverty Level,254371
+2015,Poverty,100% to 149% of Poverty Level,250612
+2016,Poverty,100% to 149% of Poverty Level,259873
+2012,Poverty,150% or Above Poverty Level,2141750
+2013,Poverty,150% or Above Poverty Level,2169480
+2014,Poverty,150% or Above Poverty Level,2184348
+2015,Poverty,150% or Above Poverty Level,2211452
+2016,Poverty,150% or Above Poverty Level,2223447

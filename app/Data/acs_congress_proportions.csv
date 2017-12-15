@@ -1,0 +1,153 @@
+"congressional","Variable","col","Value"
+"District 1","Cash Assistance/SNAP","With",0.0938849828736254
+"District 2","Cash Assistance/SNAP","With",0.113258622989111
+"District 3","Cash Assistance/SNAP","With",0.0746314528863783
+"District 4","Cash Assistance/SNAP","With",0.120609961396685
+"District 1","Cash Assistance/SNAP","Without",0.906115017126375
+"District 2","Cash Assistance/SNAP","Without",0.886741377010889
+"District 3","Cash Assistance/SNAP","Without",0.925368547113622
+"District 4","Cash Assistance/SNAP","Without",0.879390038603315
+"District 1","Citizen","Born Abroad",0.00846888134800883
+"District 2","Citizen","Born Abroad",0.00681175647305808
+"District 3","Citizen","Born Abroad",0.00687026410155173
+"District 4","Citizen","Born Abroad",0.00718159778053637
+"District 1","Citizen","Naturalized",0.022750640348717
+"District 2","Citizen","Naturalized",0.0117844646606018
+"District 3","Citizen","Naturalized",0.0341877105970545
+"District 4","Citizen","Naturalized",0.0302537997761652
+"District 1","Citizen","U.S. Born",0.913912923704937
+"District 2","Citizen","U.S. Born",0.958347095871239
+"District 3","Citizen","U.S. Born",0.895537100237437
+"District 4","Citizen","U.S. Born",0.922407640375798
+"District 1","Citizen","U.S. Islands",0.0014413933097646
+"District 2","Citizen","U.S. Islands",0.00118824352694192
+"District 3","Citizen","U.S. Islands",0.000870783326392307
+"District 4","Citizen","U.S. Islands",0.00104835775798626
+"District 1","Citizen","Not",0.0534261612885722
+"District 2","Citizen","Not",0.0218684394681596
+"District 3","Citizen","Not",0.0625341417375643
+"District 4","Citizen","Not",0.0391086043095141
+"District 1","Disability","Yes",0.123326772221677
+"District 2","Disability","Yes",0.1465558578972
+"District 3","Disability","Yes",0.101245231607629
+"District 4","Disability","Yes",0.125348909116323
+"District 1","Disability","No",0.876673227778323
+"District 2","Disability","No",0.8534441421028
+"District 3","Disability","No",0.898754768392371
+"District 4","Disability","No",0.874651090883677
+"District 1","Education","Less than 9th Grade",0.0499047268375754
+"District 2","Education","Less than 9th Grade",0.0258240505058799
+"District 3","Education","Less than 9th Grade",0.03142523107596
+"District 4","Education","Less than 9th Grade",0.0343753990370532
+"District 1","Education","9th to 12th Grade, No Diploma",0.0745174207207622
+"District 2","Education","9th to 12th Grade, No Diploma",0.0621288009415113
+"District 3","Education","9th to 12th Grade, No Diploma",0.0538786310627662
+"District 4","Education","9th to 12th Grade, No Diploma",0.0760649125310779
+"District 1","Education","High School Diploma or Equivalent",0.294350807750725
+"District 2","Education","High School Diploma or Equivalent",0.305569696472069
+"District 3","Education","High School Diploma or Equivalent",0.199835809627127
+"District 4","Education","High School Diploma or Equivalent",0.281284504968715
+"District 1","Education","Some College, No Degree",0.29100750218622
+"District 2","Education","Some College, No Degree",0.283573728914069
+"District 3","Education","Some College, No Degree",0.226525907628255
+"District 4","Education","Some College, No Degree",0.280144667362712
+"District 1","Education","Associate's Degree",0.0825461407465366
+"District 2","Education","Associate's Degree",0.077419237120362
+"District 3","Education","Associate's Degree",0.0725442910860753
+"District 4","Education","Associate's Degree",0.0764554993878302
+"District 1","Education","Bachelor's Degree",0.140593731302067
+"District 2","Education","Bachelor's Degree",0.155035534754724
+"District 3","Education","Bachelor's Degree",0.270406517771409
+"District 4","Education","Bachelor's Degree",0.171792493221065
+"District 1","Education","Graduate or Professional Degree",0.0670796704561145
+"District 2","Education","Graduate or Professional Degree",0.090448951291385
+"District 3","Education","Graduate or Professional Degree",0.145383611748408
+"District 4","Education","Graduate or Professional Degree",0.0798825234915461
+"District 1","Voting Age Population (Gender)","Male",0.504875960786119
+"District 2","Voting Age Population (Gender)","Male",0.493663957084599
+"District 3","Voting Age Population (Gender)","Male",0.483104517434232
+"District 4","Voting Age Population (Gender)","Male",0.491341365401516
+"District 1","Voting Age Population (Gender)","Female",0.495124039213881
+"District 2","Voting Age Population (Gender)","Female",0.506336042915401
+"District 3","Voting Age Population (Gender)","Female",0.516895482565768
+"District 4","Voting Age Population (Gender)","Female",0.508658634598484
+"District 1","Voting Age Population (Citizenship)","Citizen",0.935766557739218
+"District 2","Voting Age Population (Citizenship)","Citizen",0.97370154455301
+"District 3","Voting Age Population (Citizenship)","Citizen",0.925014843102905
+"District 4","Voting Age Population (Citizenship)","Citizen",0.952438538904704
+"District 1","Voting Age Population (Citizenship)","Not Citizen",0.0642334422607815
+"District 2","Voting Age Population (Citizenship)","Not Citizen",0.0262984554469898
+"District 3","Voting Age Population (Citizenship)","Not Citizen",0.0749851568970951
+"District 4","Voting Age Population (Citizenship)","Not Citizen",0.0475614610952957
+"District 1","Voting Age Population (Race)","Asian",0.0164069722547898
+"District 2","Voting Age Population (Race)","Asian",0.0150600186832788
+"District 3","Voting Age Population (Race)","Asian",0.0403460533212639
+"District 4","Voting Age Population (Race)","Asian",0.0320554635776801
+"District 1","Voting Age Population (Race)","Black/African-American",0.0291620471877557
+"District 2","Voting Age Population (Race)","Black/African-American",0.0439219046144819
+"District 3","Voting Age Population (Race)","Black/African-American",0.082838839404711
+"District 4","Voting Age Population (Race)","Black/African-American",0.0640686642913712
+"District 1","Voting Age Population (Race)","Hispanic or Latino/a",0.117252115514719
+"District 2","Voting Age Population (Race)","Hispanic or Latino/a",0.0494890897211368
+"District 3","Voting Age Population (Race)","Hispanic or Latino/a",0.0933345736678182
+"District 4","Voting Age Population (Race)","Hispanic or Latino/a",0.0903120653126625
+"District 1","Voting Age Population (Race)","Multiracial",0.0175971153199041
+"District 2","Voting Age Population (Race)","Multiracial",0.0271825507535409
+"District 3","Voting Age Population (Race)","Multiracial",0.0175441734989418
+"District 4","Voting Age Population (Race)","Multiracial",0.0216073485932898
+"District 1","Voting Age Population (Race)","Native American/American Indian",0.00548315912141939
+"District 2","Voting Age Population (Race)","Native American/American Indian",0.013571476141021
+"District 3","Voting Age Population (Race)","Native American/American Indian",0.00354210905760221
+"District 4","Voting Age Population (Race)","Native American/American Indian",0.00920227925463008
+"District 1","Voting Age Population (Race)","Pacific Islander",0.00096344914794966
+"District 2","Voting Age Population (Race)","Pacific Islander",0.000547178878895275
+"District 3","Voting Age Population (Race)","Pacific Islander",0.000463336487837864
+"District 4","Voting Age Population (Race)","Pacific Islander",0.000464891503878077
+"District 1","Voting Age Population (Race)","White/European-American",0.781452895483478
+"District 2","Voting Age Population (Race)","White/European-American",0.841658311989157
+"District 3","Voting Age Population (Race)","White/European-American",0.742091525951316
+"District 4","Voting Age Population (Race)","White/European-American",0.765814120574113
+"District 1","Voting Age Population (Race)","Other Race",0.0316822459699843
+"District 2","Voting Age Population (Race)","Other Race",0.00856946921848817
+"District 3","Voting Age Population (Race)","Other Race",0.0198393886105093
+"District 4","Voting Age Population (Race)","Other Race",0.0164751668923749
+"District 1","Health Insurance","With",0.88773428075016
+"District 2","Health Insurance","With",0.891914213858444
+"District 3","Health Insurance","With",0.894859673024523
+"District 4","Health Insurance","With",0.876266273601222
+"District 1","Health Insurance","Without",0.11226571924984
+"District 2","Health Insurance","Without",0.108085786141556
+"District 3","Health Insurance","Without",0.105140326975477
+"District 4","Health Insurance","Without",0.123733726398778
+"District 1","Language at Home","English Only",0.860284659736568
+"District 2","Language at Home","English Only",0.943034122238533
+"District 3","Language at Home","English Only",0.859466449584452
+"District 4","Language at Home","English Only",0.885540654190223
+"District 1","Language at Home","Spanish, Always or Sometimes",0.109855151549678
+"District 2","Language at Home","Spanish, Always or Sometimes",0.0323662978743719
+"District 3","Language at Home","Spanish, Always or Sometimes",0.0826727907928404
+"District 4","Language at Home","Spanish, Always or Sometimes",0.0751295181714518
+"District 1","Language at Home","Asian/Pacific, Always or Sometimes",0.0133319940873288
+"District 2","Language at Home","Asian/Pacific, Always or Sometimes",0.0106758805065225
+"District 3","Language at Home","Asian/Pacific, Always or Sometimes",0.0263134517674094
+"District 4","Language at Home","Asian/Pacific, Always or Sometimes",0.0235586894646582
+"District 1","Language at Home","Other Indo-European, Always or Sometimes",0.0127428257890807
+"District 2","Language at Home","Other Indo-European, Always or Sometimes",0.0100955398808884
+"District 3","Language at Home","Other Indo-European, Always or Sometimes",0.0219912244805827
+"District 4","Language at Home","Other Indo-European, Always or Sometimes",0.0105470141235413
+"District 1","Language at Home","Other, Always or Sometimes",0.00378536883734458
+"District 2","Language at Home","Other, Always or Sometimes",0.00382815949968372
+"District 3","Language at Home","Other, Always or Sometimes",0.00955608337471584
+"District 4","Language at Home","Other, Always or Sometimes",0.00522412405012525
+"District 1","Poverty","Below 100% of Poverty Level",0.142646614707351
+"District 2","Poverty","Below 100% of Poverty Level",0.157422821928211
+"District 3","Poverty","Below 100% of Poverty Level",0.0998864072852435
+"District 4","Poverty","Below 100% of Poverty Level",0.1449831734826
+"District 1","Poverty","100% to 149% of Poverty Level",0.107786056938427
+"District 2","Poverty","100% to 149% of Poverty Level",0.0918703817284383
+"District 3","Poverty","100% to 149% of Poverty Level",0.0661735658407159
+"District 4","Poverty","100% to 149% of Poverty Level",0.0984404449064508
+"District 1","Poverty","150% or Above Poverty Level",0.749567328354222
+"District 2","Poverty","150% or Above Poverty Level",0.750706796343351
+"District 3","Poverty","150% or Above Poverty Level",0.833940026874041
+"District 4","Poverty","150% or Above Poverty Level",0.756576381610949
