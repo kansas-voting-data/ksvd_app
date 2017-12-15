@@ -24,6 +24,6 @@ acs_county_totals <- get_totals(dat_county, TRUE)
 acs_county_proportions <- get_proportions(dat_county, TRUE)
 
 write.csv(acs_county_totals, 
-          "../ksvd_app/Data/acs_county_totals.csv", row.names = FALSE)
+          "../app/Data/acs_county_totals.csv", row.names = FALSE)
 write.csv(acs_county_proportions, 
-          "../ksvd_app/Data/acs_county_proportions.csv", row.names = FALSE)
+          "../app/Data/acs_county_proportions.csv", row.names = FALSE)

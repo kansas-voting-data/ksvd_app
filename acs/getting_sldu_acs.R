@@ -24,6 +24,6 @@ acs_sldu_totals <- get_totals(dat_sldu, TRUE)
 acs_sldu_proportions <- get_proportions(dat_sldu, TRUE)
 
 write.csv(acs_sldu_totals, 
-          "../ksvd_app/Data/acs_sldu_totals.csv", row.names = FALSE)
+          "../app/Data/acs_sldu_totals.csv", row.names = FALSE)
 write.csv(acs_sldu_proportions, 
-          "../ksvd_app/Data/acs_sldu_proportions.csv", row.names = FALSE)
+          "../app/Data/acs_sldu_proportions.csv", row.names = FALSE)

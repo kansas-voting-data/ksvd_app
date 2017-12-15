@@ -204,5 +204,5 @@ state_proportions <- key %>%
   gather("Variable", "Value", -1) %>% 
   separate(Variable, c("Variable", "col"), sep = " - ")
 
-write_csv(state_proportions, "../ksvd_app/data/acs_state_proportions.csv")
-write_csv(state_totals, "../ksvd_app/data/acs_state_totals.csv")
+write_csv(state_proportions, "../app/data/acs_state_proportions.csv")
+write_csv(state_totals, "../app/data/acs_state_totals.csv")

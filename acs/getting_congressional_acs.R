@@ -24,6 +24,6 @@ acs_congress_totals <- get_totals(dat_congress, TRUE)
 acs_congress_proportions <- get_proportions(dat_congress, TRUE)
 
 write.csv(acs_congress_totals, 
-          "../ksvd_app/Data/acs_congress_totals.csv", row.names = FALSE)
+          "../app/Data/acs_congress_totals.csv", row.names = FALSE)
 write.csv(acs_congress_proportions, 
-          "../ksvd_app/Data/acs_congress_proportions.csv", row.names = FALSE)
+          "../app/Data/acs_congress_proportions.csv", row.names = FALSE)
