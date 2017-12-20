@@ -35,9 +35,16 @@ ui <- fluidPage(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", 
               href = "https://s3.amazonaws.com/kansas-voting-data/styles.css")
+              
   ),
+  
+  #tags$head(
+  #  tags$link(rel = "stylesheet", type = "text/css", 
+   #           href = "http://127.0.0.1:5000/static/styles.css")
+  #  
+  #),
 
-  navbarPage(title = "Kansas Voting Data", windowTitle = "Kansas Voting Data",
+  navbarPage(title = "Kansas Voting Data", windowTitle = "Kansas Voting Data", fluid=FALSE,
     tabPanel("Election Results",
              sidebarLayout(
                sidebarPanel(
@@ -83,7 +90,8 @@ ui <- fluidPage(
     
     tabPanel("Candidate History",
              mainPanel(
-               dataTableOutput("candidate_history")
+               dataTableOutput("candidate_history"),
+               width=12
                )),
     
     navbarMenu("Demographics",
