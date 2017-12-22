@@ -140,7 +140,9 @@ ui <- fluidPage(
                             )
                           ),
                           mainPanel(
-                            dataTableOutput("state_demographics")
+                            dataTableOutput("state_demographics"),
+                            em("Source: American Community Survey,
+                               1-Year Estimates")
                           ))
                         ),
                tabPanel("County",
@@ -158,7 +160,9 @@ ui <- fluidPage(
                             )
                           ),
                           mainPanel(
-                            dataTableOutput("county_demographics")
+                            dataTableOutput("county_demographics"),
+                            em("Source: American Community Survey,
+                               2011-2015 5-Year Estimates")
                           ))
                         ),
                tabPanel("Congressional District",
@@ -176,7 +180,9 @@ ui <- fluidPage(
                             )
                           ),
                           mainPanel(
-                            dataTableOutput("congress_demographics")
+                            dataTableOutput("congress_demographics"),
+                            em("Source: American Community Survey,
+                               2011-2015 5-Year Estimates")
                           ))
                         ),
                tabPanel("SLDU",
@@ -194,7 +200,9 @@ ui <- fluidPage(
                             )
                           ),
                           mainPanel(
-                            dataTableOutput("sldu_demographics")
+                            dataTableOutput("sldu_demographics"),
+                            em("Source: American Community Survey,
+                               2011-2015 5-Year Estimates")
                           ))
                         ),
                tabPanel("SLDL",
@@ -212,7 +220,9 @@ ui <- fluidPage(
                             )
                           ),
                           mainPanel(
-                            dataTableOutput("sldl_demographics")
+                            dataTableOutput("sldl_demographics"),
+                            em("Source: American Community Survey,
+                               2011-2015 5-Year Estimates")
                           ))
                         ))
     )
@@ -393,7 +403,9 @@ server <- function(input, output) {
       }
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE, paging = FALSE),
+      dom = "Bfrtip", scrollX = TRUE, paging = FALSE, 
+      bInfo = FALSE, searching = FALSE
+    ),
     extensions = "Buttons", rownames = FALSE)
   )
   
@@ -417,7 +429,7 @@ server <- function(input, output) {
       }
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE),
+      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE),
     extensions = "Buttons", rownames = FALSE)
   )
   
@@ -445,7 +457,9 @@ server <- function(input, output) {
       }
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE, paging = FALSE),
+      dom = "Bfrtip", scrollX = TRUE, paging = FALSE, 
+      bInfo = FALSE, searching = FALSE
+    ),
     extensions = "Buttons", rownames = FALSE)
   )
   
@@ -471,7 +485,7 @@ server <- function(input, output) {
       }
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE),
+      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE),
     extensions = "Buttons", rownames = FALSE)
   )
   
@@ -497,7 +511,7 @@ server <- function(input, output) {
       }
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE),
+      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE),
     extensions = "Buttons", rownames = FALSE)
   )
   
