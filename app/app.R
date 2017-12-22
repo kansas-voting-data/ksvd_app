@@ -44,7 +44,8 @@ ui <- fluidPage(
   #  
   #),
 
-  navbarPage(title = "Kansas Voting Data", windowTitle = "Kansas Voting Data", fluid=FALSE,
+  navbarPage(title = "Kansas Voting Data", windowTitle = "Kansas Voting Data", 
+             fluid = FALSE,
     tabPanel("Election Results",
              sidebarLayout(
                sidebarPanel(
@@ -211,8 +212,14 @@ server <- function(input, output) {
                              aes(x = race, y = proportion, fill = candidate)) +
         geom_bar(width = 1, stat = "identity") +
         theme_minimal() +
-        theme(text = element_text(size = 18)) +
-        labs(y = "Proportion", x = NULL) +
+        theme(text = element_text(size = 18),
+              axis.text.x = element_blank(),
+              panel.grid.major = element_blank()) +
+        labs(y = "Proportion", x = NULL,
+             title = input$results_race, 
+             subtitle = paste(input$results_year, 
+                              input$results_election,
+                              "Election")) +
         scale_fill_discrete(name = "Candidate") +
         facet_wrap( ~ party)
     } else {
@@ -220,8 +227,14 @@ server <- function(input, output) {
                              aes(x = race, y = proportion, fill = candidate)) +
         geom_bar(width = 1, stat = "identity") +
         theme_minimal() +
-        theme(text = element_text(size = 18)) +
-        labs(y = "Proportion", x = NULL) +
+        theme(text = element_text(size = 18),
+              axis.text.x = element_blank(),
+              panel.grid.major = element_blank()) +
+        labs(y = "Proportion", x = NULL,
+             title = input$results_race, 
+             subtitle = paste(input$results_year, 
+                           input$results_election,
+                           "Election")) +
         scale_fill_discrete(name = "Candidate")
     }
     results_plot
