@@ -363,7 +363,7 @@ server <- function(input, output) {
       }
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE),
+      dom = "Bfrtip", scrollX = TRUE, paging = FALSE),
     extensions = "Buttons", rownames = FALSE)
   )
   
@@ -415,7 +415,7 @@ server <- function(input, output) {
       }
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE),
+      dom = "Bfrtip", scrollX = TRUE, paging = FALSE),
     extensions = "Buttons", rownames = FALSE)
   )
   
