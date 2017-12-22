@@ -364,7 +364,7 @@ server <- function(input, output) {
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
       dom = "Bfrtip", scrollX = TRUE),
-    extensions = "Buttons")
+    extensions = "Buttons", rownames = FALSE)
   )
   
   ## DEMOGRAPHICS, COUNTY
@@ -388,7 +388,7 @@ server <- function(input, output) {
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
       dom = "Bfrtip", scrollX = TRUE),
-    extensions = "Buttons")
+    extensions = "Buttons", rownames = FALSE)
   )
   
   ## DEMOGRAPHICS, CONGRESSIONAL
@@ -412,7 +412,7 @@ server <- function(input, output) {
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
       dom = "Bfrtip", scrollX = TRUE),
-    extensions = "Buttons")
+    extensions = "Buttons", rownames = FALSE)
   )
   
   ## DEMOGRAPHICS, SLDU
@@ -436,7 +436,7 @@ server <- function(input, output) {
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
       dom = "Bfrtip", scrollX = TRUE),
-    extensions = "Buttons")
+    extensions = "Buttons", rownames = FALSE)
   )
   
   ## DEMOGRAPHICS, SLDL
@@ -460,7 +460,7 @@ server <- function(input, output) {
     }, options = list(
       buttons = c("copy", "csv", "excel", "pdf"), 
       dom = "Bfrtip", scrollX = TRUE),
-    extensions = "Buttons")
+    extensions = "Buttons", rownames = FALSE)
   )
   
 }
