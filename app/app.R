@@ -92,19 +92,36 @@ ui <- fluidPage(
                              choices = sort(unique(turnout$county))),
                  selectInput("turnout_variable",
                              label = h4("Variable"),
-                             choices = turnout_variable_choices)
+                             choices = turnout_variable_choices,
+                             selected = "prop_turnout"),
+                 p("Select the year, county, and variable of interest by using
+                   the drop-down menus above. The table shows all the turnout
+                   variables—not just the one you select."),
+                 br(),
+                 p("The figure is a density plot; it
+                   shows us how common is each value of the variable of 
+                   interest. The higher the curve, and thus more blue area under
+                   the curve, the more common the value is. The dotted vertical
+                   line is the county that you select above. This helps you see
+                   how that county compares to other counties. If the vertical
+                   line is in the tall area under the curve, it is similar to
+                   other counties. If it is far to the right, then it has a much
+                   higher value than most other counties.")
                  ),
                mainPanel(
                  dataTableOutput("turnout_table"),
-                 br(),
+                 em("Source: Kansas Secretary of State 
+                   Office Election Statistics"),
                  plotOutput("density_turnout")
                  )
                )),
     
-    tabPanel("Candidate History",
+    tabPanel("Full Election History",
              mainPanel(
                dataTableOutput("candidate_history"),
-               width=12
+               em("Source: Kansas Secretary of State 
+                   Office Election Statistics"),
+               width = 12
                )),
     
     navbarMenu("Demographics",
@@ -290,7 +307,7 @@ server <- function(input, output) {
         ) %>% 
         gather("Variable", "Value")
     },
-    options = list(paging = FALSE, searching = FALSE,
+    options = list(paging = FALSE, searching = FALSE, bInfo = FALSE,
                    buttons = c("copy", "csv", "excel", "pdf"), dom = "Bfrtip"),
     rownames = NULL, extensions = "Buttons")
   )
@@ -341,8 +358,8 @@ server <- function(input, output) {
     }
   })
   
-  ## CANDIDATE HISTORY
-  # candidate history table
+  ## ELECTION HISTORY
+  # election history table
   output$candidate_history <- renderDataTable(
     datatable(
       arrange(results[, c(3, 2, 7, 1, 6, 4, 5)], candidate), rownames = NULL,
@@ -350,7 +367,7 @@ server <- function(input, output) {
                  "Race", "Election", "Votes", "Proportion"),
       options = list(
         buttons = c("copy", "csv", "excel", "pdf"), dom = "Bfrtip",
-        pageLength = 2000, scrollY = "500px", paging = FALSE
+        pageLength = 2000, scrollY = "500px", paging = FALSE, bInfo = FALSE
       ),
       extensions = "Buttons"
     )
