@@ -399,6 +399,8 @@ server <- function(input, output) {
           filter(Variable == input$congress_variable) %>% 
           spread(col, Value) %>% 
           select(-Variable) %>% 
+          mutate(congressional = 
+                   as.numeric(gsub("[^0-9]", "", congressional))) %>% 
           set_names(c("Congressional District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       } else if (input$congress_type == "Totals") {
@@ -406,6 +408,8 @@ server <- function(input, output) {
           filter(Variable == input$congress_variable) %>% 
           spread(col, Value) %>% 
           select(-Variable) %>% 
+          mutate(congressional = 
+                   as.numeric(gsub("[^0-9]", "", congressional))) %>% 
           set_names(c("Congressional District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
@@ -423,14 +427,16 @@ server <- function(input, output) {
           filter(Variable == input$sldu_variable) %>% 
           spread(col, Value) %>% 
           select(-Variable) %>% 
-          set_names(c("SLDU", colnames(.)[-1])) %>% 
+          mutate(sldu = sort(as.numeric(gsub("[^0-9]", "", sldu)))) %>% 
+          set_names(c("SLDU District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       } else if (input$sldu_type == "Totals") {
         sldu_totals %>% 
           filter(Variable == input$sldu_variable) %>% 
           spread(col, Value) %>% 
           select(-Variable) %>% 
-          set_names(c("SLDU", colnames(.)[-1])) %>% 
+          mutate(sldu = sort(as.numeric(gsub("[^0-9]", "", sldu)))) %>% 
+          set_names(c("SLDU District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
     }, options = list(
@@ -447,14 +453,16 @@ server <- function(input, output) {
           filter(Variable == input$sldl_variable) %>% 
           spread(col, Value) %>% 
           select(-Variable) %>% 
-          set_names(c("SLDL", colnames(.)[-1])) %>% 
+          mutate(sldl = sort(as.numeric(gsub("[^0-9]", "", sldl)))) %>% 
+          set_names(c("SLDL District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       } else if (input$sldl_type == "Totals") {
         sldl_totals %>% 
           filter(Variable == input$sldl_variable) %>% 
           spread(col, Value) %>% 
           select(-Variable) %>% 
-          set_names(c("SLDL", colnames(.)[-1])) %>% 
+          mutate(sldl = sort(as.numeric(gsub("[^0-9]", "", sldl)))) %>% 
+          set_names(c("SLDL District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
     }, options = list(
