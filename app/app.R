@@ -60,11 +60,20 @@ ui <- fluidPage(
                  selectInput("results_race",
                              label = h4("Race"),
                              choices = sort(unique(results$race)),
-                             selected = "President / Vice President")
+                             selected = "President / Vice President"),
+                 p("Select the type of election (general or primary), year, and 
+                   race by using the drop-down menus above. The figure 
+                   shows the proportion of votes that the candidate received; 
+                   the size of the rectange refers to the size of the 
+                   candidate's share of the vote. The table lists votes—and vote
+                   proportions—for the figure. For primaries, all proportions
+                   are within-party.")
                  ),
                mainPanel(
                  plotOutput("results_plot"),
-                 dataTableOutput("results_table")
+                 dataTableOutput("results_table"),
+                 em("Source: Kansas Secretary of State 
+                   Office Election Statistics")
                  )
                )),
     
@@ -253,7 +262,8 @@ server <- function(input, output) {
       },
       options = list(
         paging = FALSE, searching = FALSE,
-        buttons = c("copy", "csv", "excel", "pdf"), dom = "Bfrtip"
+        buttons = c("copy", "csv", "excel", "pdf"), dom = "Bfrtip",
+        bInfo = FALSE
       ),
       rownames = NULL, extensions="Buttons", 
       colnames = c("Party", "Candidate", "Votes", "Proportion"))
