@@ -67,7 +67,10 @@ ui <- fluidPage(
                    the size of the rectange refers to the size of the 
                    candidate's share of the vote. The table lists votes—and vote
                    proportions—for the figure. For primaries, all proportions
-                   are within-party.")
+                   are within-party."),
+                 em("R = Republican, D = Democrat,"),
+                 br(),
+                 em("L = Libertarian, O = Other")
                  ),
                mainPanel(
                  plotOutput("results_plot"),
