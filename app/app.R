@@ -336,7 +336,9 @@ server <- function(input, output) {
       colnames = c("Candidate", "Party", "Year", 
                  "Race", "Election", "Votes", "Proportion"),
       options = list(
-        buttons = c("copy", "csv", "excel", "pdf"), dom = "Bfrtip"),
+        buttons = c("copy", "csv", "excel", "pdf"), dom = "Bfrtip",
+        pageLength = 2000, scrollY = "500px", paging = FALSE
+      ),
       extensions = "Buttons"
     )
   )
