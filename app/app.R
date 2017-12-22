@@ -284,24 +284,48 @@ server <- function(input, output) {
   
   # turnout density plot
   output$density_turnout <- renderPlot({
-    vline <- turnout %>%
-      filter(county == input$turnout_county) %>% 
-      filter(year == input$turnout_year) %>% 
-      select(input$turnout_variable) %>% 
-      slice(1) %>% 
-      c() %>% 
-      as.numeric()
-    density_turnout <- ggplot(
-      filter(turnout, year == input$turnout_year),
-      aes(x = get(input$turnout_variable))) +
-      geom_density(alpha = .5, fill = "#0072B2") +
-      geom_vline(xintercept = vline, linetype = 2) +
-      labs(x = names(turnout_variable_choices[turnout_variable_choices == 
-                                                input$turnout_variable]),
-           y = "Density") +
-      theme_light() +
-      theme(text = element_text(size = 18))
-    density_turnout
+    if (max(turnout[, input$turnout_variable]) > 1.1) {
+      vline <- turnout %>%
+        filter(county == input$turnout_county) %>% 
+        filter(year == input$turnout_year) %>% 
+        select(input$turnout_variable) %>% 
+        slice(1) %>% 
+        c() %>% 
+        as.numeric() / 1000
+      density_turnout <- ggplot(
+        filter(turnout, year == input$turnout_year),
+        aes(x = get(input$turnout_variable) / 1000)) +
+        geom_density(alpha = .5, fill = "#0072B2") +
+        geom_vline(xintercept = vline, linetype = 2) +
+        labs(
+          x = paste(names(
+            turnout_variable_choices[turnout_variable_choices 
+                                     == input$turnout_variable]),
+            "(in Thousands)"),
+             y = "Density") +
+        theme_light() +
+        theme(text = element_text(size = 18))
+      density_turnout
+    } else {
+      vline <- turnout %>%
+        filter(county == input$turnout_county) %>% 
+        filter(year == input$turnout_year) %>% 
+        select(input$turnout_variable) %>% 
+        slice(1) %>% 
+        c() %>% 
+        as.numeric()
+      density_turnout <- ggplot(
+        filter(turnout, year == input$turnout_year),
+        aes(x = get(input$turnout_variable))) +
+        geom_density(alpha = .5, fill = "#0072B2") +
+        geom_vline(xintercept = vline, linetype = 2) +
+        labs(x = names(turnout_variable_choices[turnout_variable_choices == 
+                                                  input$turnout_variable]),
+             y = "Density") +
+        theme_light() +
+        theme(text = element_text(size = 18))
+      density_turnout
+    }
   })
   
   ## CANDIDATE HISTORY
