@@ -249,22 +249,60 @@ ui <- fluidPage(
                           ))
                         ),
                tabPanel("Variable Definitions",
-                        h2("Cash Assistance/SNAP"),
-                        p(""),
-                        h2("Citizen"),
-                        p(""),
-                        h2("Disability"),
-                        p(""),
-                        h2("Education"),
-                        p(""),
-                        h2("Voting Age Population"),
-                        p(""),
-                        h2("Health Insurance"),
-                        p(""),
-                        h2("Language at Home"),
-                        p(""),
-                        h2("Poverty"),
-                        p("")
+                        em("All variables are at the individual level (i.e., 
+                           total numbers are refer to people), except where 
+                           otherwise noted. Data come from the American 
+                           Community Survey (ACS). Below are the definitions of 
+                           the variables as well as the survey table name for 
+                           each variable."),
+                        br(),
+                        br(),
+                        em("If you would like to see more detailed numbers,
+                           finer-grained cross-tabulations, or have any
+                           questions, you can email us at this@email.com or 
+                           visit factfinder.census.gov to explore the data,
+                           based on the table names given below."),
+                        h3("Cash Assistance/SNAP"),
+                        p("Number of households (i.e., total numbers refer to 
+                          households, not people) with cash public assistance or 
+                          food stamps/SNAP in the past year. Table B19058."),
+                        h3("Citizen"),
+                        p("Citizenship and nativity. \"Not\" refers to not being
+                          a citizen. If people are a citizen, nativity is broken
+                          into: born in the United States, born in Peurto Rico 
+                          or U.S. island Areas, born abroad of American 
+                          parent(s), and citizen by naturalization. Table 
+                          B05001."),
+                        h3("Disability"),
+                        p("Population with a disability. The ACS defines
+                          disability with three questions that all aim to
+                          identify limitations in basic reas of functioning and
+                          independent living. It includes any physical, mental,
+                          or emotional condition that makes it difficult to
+                          concentrate, remember, make decisions, see, hear,
+                          climb stairs, dress, bathe, or run errands. Table
+                          B18101."),
+                        h3("Education"),
+                        p("Population at each education level. Table B15001."),
+                        h3("Voting Age Population"),
+                        p("Population that is 18 years of age or older. Gender
+                          comes from table B01001, race from B01001B through 
+                          B01001I, and citizenship comes from table B05003."),
+                        h3("Health Insurance"),
+                        p("Population with or without health insurance. Table
+                          B27001."),
+                        h3("Language at Home"),
+                        p("Population of people 5 years or older who speak a
+                          language—other than English—at homesometimes or often.
+                          If people speak multiple at home, they were asked to
+                          write down the language they speak most often. 
+                          Table B16007."),
+                        h3("Poverty"),
+                        p("Population living below the poverty level (i.e.,
+                          Below 100%), at the poverty level to 1.49 times the
+                          poverty level (i.e., 100% to 149%), and at or above 
+                          1.5 times the poverty level (i.e., 150%). Table 
+                          B06012.")
                ))
     )
   )
