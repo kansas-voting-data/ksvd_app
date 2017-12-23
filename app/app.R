@@ -35,13 +35,11 @@ ui <- fluidPage(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", 
               href = "https://s3.amazonaws.com/kansas-voting-data/styles.css")
-              
   ),
   
   #tags$head(
   #  tags$link(rel = "stylesheet", type = "text/css", 
-   #           href = "http://127.0.0.1:5000/static/styles.css")
-  #  
+  #            href = "http://127.0.0.1:5000/static/styles.css")
   #),
 
   navbarPage(title = "Kansas Voting Data", windowTitle = "Kansas Voting Data", 
@@ -137,7 +135,12 @@ ui <- fluidPage(
                               "state_type",
                               label = h4("Type"),
                               choices = c("Proportions", "Totals")
-                            )
+                            ),
+                            p("Select the demographic variable that you are
+                              interested in, as well as whether you would like
+                              to see proportions or totals. For a look into
+                              what the variables mean, see the Variable
+                              Definitions tab under Demographics.")
                           ),
                           mainPanel(
                             dataTableOutput("state_demographics"),
@@ -157,7 +160,12 @@ ui <- fluidPage(
                               "county_type",
                               label = h4("Type"),
                               choices = c("Proportions", "Totals")
-                            )
+                            ),
+                            p("Select the demographic variable that you are
+                              interested in, as well as whether you would like
+                              to see proportions or totals. For a look into
+                              what the variables mean, see the Variable
+                              Definitions tab under Demographics.")
                           ),
                           mainPanel(
                             dataTableOutput("county_demographics"),
@@ -177,7 +185,12 @@ ui <- fluidPage(
                               "congress_type",
                               label = h4("Type"),
                               choices = c("Proportions", "Totals")
-                            )
+                            ),
+                            p("Select the demographic variable that you are
+                              interested in, as well as whether you would like
+                              to see proportions or totals. For a look into
+                              what the variables mean, see the Variable
+                              Definitions tab under Demographics.")
                           ),
                           mainPanel(
                             dataTableOutput("congress_demographics"),
@@ -197,7 +210,12 @@ ui <- fluidPage(
                               "sldu_type",
                               label = h4("Type"),
                               choices = c("Proportions", "Totals")
-                            )
+                            ),
+                            p("Select the demographic variable that you are
+                              interested in, as well as whether you would like
+                              to see proportions or totals. For a look into
+                              what the variables mean, see the Variable
+                              Definitions tab under Demographics.")
                           ),
                           mainPanel(
                             dataTableOutput("sldu_demographics"),
@@ -217,14 +235,37 @@ ui <- fluidPage(
                               "sldl_type",
                               label = h4("Type"),
                               choices = c("Proportions", "Totals")
-                            )
+                            ),
+                            p("Select the demographic variable that you are
+                              interested in, as well as whether you would like
+                              to see proportions or totals. For a look into
+                              what the variables mean, see the Variable
+                              Definitions tab under Demographics.")
                           ),
                           mainPanel(
                             dataTableOutput("sldl_demographics"),
                             em("Source: American Community Survey,
                                2011-2015 5-Year Estimates")
                           ))
-                        ))
+                        ),
+               tabPanel("Variable Definitions",
+                        h2("Cash Assistance/SNAP"),
+                        p(""),
+                        h2("Citizen"),
+                        p(""),
+                        h2("Disability"),
+                        p(""),
+                        h2("Education"),
+                        p(""),
+                        h2("Voting Age Population"),
+                        p(""),
+                        h2("Health Insurance"),
+                        p(""),
+                        h2("Language at Home"),
+                        p(""),
+                        h2("Poverty"),
+                        p("")
+               ))
     )
   )
 
