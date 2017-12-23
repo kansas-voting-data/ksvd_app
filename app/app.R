@@ -165,7 +165,7 @@ ui <- fluidPage(
                                2011-2015 5-Year Estimates")
                           ))
                         ),
-               tabPanel("Congressional District",
+               tabPanel("Congressional",
                         sidebarLayout(
                           sidebarPanel(
                             selectInput(
@@ -428,8 +428,8 @@ server <- function(input, output) {
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
     }, options = list(
-      buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE),
+      buttons = c("copy", "csv", "excel", "pdf"), paging = FALSE, 
+      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE, scrollY = "450px"),
     extensions = "Buttons", rownames = FALSE)
   )
   
@@ -484,8 +484,8 @@ server <- function(input, output) {
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
     }, options = list(
-      buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE),
+      buttons = c("copy", "csv", "excel", "pdf"), paging = FALSE,
+      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE, scrollY = "450px"),
     extensions = "Buttons", rownames = FALSE)
   )
   
@@ -510,8 +510,8 @@ server <- function(input, output) {
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
     }, options = list(
-      buttons = c("copy", "csv", "excel", "pdf"), 
-      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE),
+      buttons = c("copy", "csv", "excel", "pdf"), paging = FALSE,
+      dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE, scrollY = "450px"),
     extensions = "Buttons", rownames = FALSE)
   )
   
