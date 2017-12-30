@@ -62,7 +62,7 @@ ui <- fluidPage(
                  p("Select the type of election (general or primary), year, and 
                    race by using the drop-down menus above. The figure 
                    shows the proportion of votes that the candidate received; 
-                   the size of the rectange refers to the size of the 
+                   the size of the rectangle refers to the size of the 
                    candidate's share of the vote. The table lists votes—and vote
                    proportions—for the figure. For primaries, all proportions
                    are within-party."),
