@@ -327,11 +327,11 @@ server <- function(input, output) {
         theme_void()
     } else if (input$results_election == "Primary") {
       results_plot <- ggplot(results_dat, 
-                             aes(x = race, y = proportion, fill = candidate)) +
+                             aes(x = candidate, y = proportion, 
+                                 fill = candidate)) +
         geom_bar(width = 1, stat = "identity") +
-        theme_minimal() +
+        theme_light() +
         theme(text = element_text(size = 18),
-              axis.text.x = element_blank(),
               panel.grid.major = element_blank()) +
         labs(y = "Proportion", x = NULL,
              title = input$results_race, 
@@ -339,21 +339,22 @@ server <- function(input, output) {
                               input$results_election,
                               "Election")) +
         scale_fill_discrete(name = "Candidate") +
-        facet_wrap( ~ party)
+        facet_wrap( ~ party, scales = "free")
     } else {
       results_plot <- ggplot(results_dat, 
-                             aes(x = race, y = proportion, fill = candidate)) +
+                             aes(x = candidate, y = proportion, 
+                                 fill = candidate)) +
         geom_bar(width = 1, stat = "identity") +
-        theme_minimal() +
+        theme_light() +
         theme(text = element_text(size = 18),
-              axis.text.x = element_blank(),
               panel.grid.major = element_blank()) +
         labs(y = "Proportion", x = NULL,
              title = input$results_race, 
              subtitle = paste(input$results_year, 
                            input$results_election,
                            "Election")) +
-        scale_fill_discrete(name = "Candidate")
+        scale_fill_discrete(name = "Candidate") +
+        coord_flip()
     }
     results_plot
   })
