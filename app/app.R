@@ -1,7 +1,9 @@
 library(shiny)
 library(tidyverse)
+library(ggplot2)
 library(purrr)
 library(DT)
+library(plotly)
 
 results <- read_csv("Data/election_results.csv")
 turnout <- read_csv("Data/election_turnout.csv")
@@ -89,10 +91,16 @@ ui <- fluidPage(
           sidebarPanel(
             selectInput("trends_county",
                         label = h4("County"),
-                        choices = sort(unique(county_long$county)))
+                        choices = sort(unique(county_long$county))),
+            p("Select county of interest by using the drop-down menu above.
+              The line graph to the right shows the number of registered
+              voters in that county, broken up by party, over time. You can
+              hover over any point to see the exact date of the voter file
+              and exactly how many voters were registered with that party.")
           ),
           mainPanel(
-            plotOutput("registration_county")
+            plotlyOutput("registration_county"),
+            em("Source: Kansas Voter File")
           )
         )
       ),
@@ -101,10 +109,16 @@ ui <- fluidPage(
           sidebarPanel(
             selectInput("trends_cg_district",
                         label = h4("District"),
-                        choices = sort(unique(cg_long$district_cg)))
+                        choices = sort(unique(cg_long$district_cg))),
+            p("Select district of interest by using the drop-down menu above.
+              The line graph to the right shows the number of registered
+              voters in that district, broken up by party, over time. You can
+              hover over any point to see the exact date of the voter file
+              and exactly how many voters were registered with that party.")
           ),
           mainPanel(
-            plotOutput("registration_cg")
+            plotlyOutput("registration_cg"),
+            em("Source: Kansas Voter File")
           )
         )
       ),
@@ -113,10 +127,16 @@ ui <- fluidPage(
           sidebarPanel(
             selectInput("trends_ks_district",
                         label = h4("District"),
-                        choices = sort(unique(ks_long$district_ks)))
+                        choices = sort(unique(ks_long$district_ks))),
+            p("Select district of interest by using the drop-down menu above.
+              The line graph to the right shows the number of registered
+              voters in that district, broken up by party, over time. You can
+              hover over any point to see the exact date of the voter file
+              and exactly how many voters were registered with that party.")
           ),
           mainPanel(
-            plotOutput("registration_ks")
+            plotlyOutput("registration_ks"),
+            em("Source: Kansas Voter File")
           )
         )
       ),
@@ -125,10 +145,16 @@ ui <- fluidPage(
           sidebarPanel(
             selectInput("trends_kr_district",
                         label = h4("District"),
-                        choices = sort(unique(kr_long$district_kr)))
+                        choices = sort(unique(kr_long$district_kr))),
+            p("Select district of interest by using the drop-down menu above.
+              The line graph to the right shows the number of registered
+              voters in that district, broken up by party, over time. You can
+              hover over any point to see the exact date of the voter file
+              and exactly how many voters were registered with that party.")
           ),
           mainPanel(
-            plotOutput("registration_kr")
+            plotlyOutput("registration_kr"),
+            em("Source: Kansas Voter File")
           )
         )
       )
@@ -437,59 +463,79 @@ server <- function(input, output) {
   
   ## REGISTRATION TRENDS
   # county
-  output$registration_county <- renderPlot(
-    ggplot(county_long[county_long$county == input$trends_county, ], 
-         aes(x = date, y = count, color = desc_party)) +
-    geom_point() +
-    geom_line() +
-    scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                  Libertarian = "green", Unaffiliated = "grey"),
-                       name = NULL) +
-    labs(x = "Date", y = "Number of Registered Voters") +
-    theme_minimal() +
-    theme(legend.position = "top", text = element_text(size = 20))
+  output$registration_county <- renderPlotly(
+    ggplotly(
+      ggplot(county_long[county_long$county == input$trends_county, ], 
+             aes(x = date, y = count / 1000, 
+                 color = desc_party, group = desc_party,
+                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+        geom_point() +
+        geom_line() +
+        scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                      Libertarian = "green", Unaffiliated = "grey"),
+                           name = NULL) +
+        labs(x = "Date", y = "Registered Voters (in Thousands)") +
+        theme_minimal() +
+        theme(legend.position = "top", text = element_text(size = 16)),
+      tooltip = "text"
+    )
   )
   
   # congressional
-  output$registration_cg <- renderPlot(
-    ggplot(cg_long[cg_long$district_cg == input$trends_cg_district, ], 
-           aes(x = date, y = count, color = desc_party)) +
-      geom_point() +
-      geom_line() +
-      scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                    Libertarian = "green", Unaffiliated = "grey"),
-                         name = NULL) +
-      labs(x = "Date", y = "Number of Registered Voters") +
-      theme_minimal() +
-      theme(legend.position = "top", text = element_text(size = 20))
+  output$registration_cg <- renderPlotly(
+    ggplotly(
+      ggplot(cg_long[cg_long$district_cg == input$trends_cg_district, ], 
+             aes(x = date, y = count / 1000, 
+                 color = desc_party, group = desc_party,
+                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+        geom_point() +
+        geom_line() +
+        scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                      Libertarian = "green", Unaffiliated = "grey"),
+                           name = NULL) +
+        labs(x = "Date", y = "Registered Voters (in Thousands)") +
+        theme_minimal() +
+        theme(legend.position = "top", text = element_text(size = 16)),
+      tooltip = "text"
+    )
   )
   
   # kansas senate
-  output$registration_ks <- renderPlot(
-    ggplot(ks_long[ks_long$district_ks == input$trends_ks_district, ], 
-           aes(x = date, y = count, color = desc_party)) +
-      geom_point() +
-      geom_line() +
-      scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                    Libertarian = "green", Unaffiliated = "grey"),
-                         name = NULL) +
-      labs(x = "Date", y = "Number of Registered Voters") +
-      theme_minimal() +
-      theme(legend.position = "top", text = element_text(size = 20))
+  output$registration_ks <- renderPlotly(
+    ggplotly(
+      ggplot(ks_long[ks_long$district_ks == input$trends_ks_district, ], 
+             aes(x = date, y = count / 1000, 
+                 color = desc_party, group = desc_party,
+                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+        geom_point() +
+        geom_line() +
+        scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                      Libertarian = "green", Unaffiliated = "grey"),
+                           name = NULL) +
+        labs(x = "Date", y = "Registered Voters (in Thousands)") +
+        theme_minimal() +
+        theme(legend.position = "top", text = element_text(size = 16)),
+      tooltip = "text"
+    )
   )
   
   # kansas house
-  output$registration_kr <- renderPlot(
-    ggplot(kr_long[kr_long$district_kr == input$trends_kr_district, ], 
-           aes(x = date, y = count, color = desc_party)) +
-      geom_point() +
-      geom_line() +
-      scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                    Libertarian = "green", Unaffiliated = "grey"),
-                         name = NULL) +
-      labs(x = "Date", y = "Number of Registered Voters") +
-      theme_minimal() +
-      theme(legend.position = "top", text = element_text(size = 20))
+  output$registration_kr <- renderPlotly(
+    ggplotly(
+      ggplot(kr_long[kr_long$district_kr == input$trends_kr_district, ], 
+             aes(x = date, y = count / 1000, 
+                 color = desc_party, group = desc_party,
+                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+        geom_point() +
+        geom_line() +
+        scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                      Libertarian = "green", Unaffiliated = "grey"),
+                           name = NULL) +
+        labs(x = "Date", y = "Registered Voters (in Thousands)") +
+        theme_minimal() +
+        theme(legend.position = "top", text = element_text(size = 16)),
+      tooltip = "text"
+    )
   )
   
   ## GENERAL ELECTION TURNOUT
