@@ -21,6 +21,11 @@ sldu_totals <- read_csv("Data/acs_sldu_totals.csv")
 sldl_proportions <- read_csv("Data/acs_sldl_proportions.csv")
 sldl_totals <- read_csv("Data/acs_sldl_totals.csv")
 
+county_long <- read_csv("Data/county_long.csv")
+cg_long <- read_csv("Data/cg_long.csv")
+ks_long <- read_csv("Data/ks_long.csv")
+kr_long <- read_csv("Data/kr_long.csv")
+
 turnout_variable_choices <- c(
   "Registered Voters" = "registered_voters", 
   "Total Votes Cast" = "total_votes_cast",
@@ -78,6 +83,57 @@ ui <- fluidPage(
                  )
                )),
     
+    navbarMenu("Registration Trends",
+      tabPanel("County",
+        sidebarLayout(
+          sidebarPanel(
+            selectInput("trends_county",
+                        label = h4("County"),
+                        choices = sort(unique(county_long$county)))
+          ),
+          mainPanel(
+            plotOutput("registration_county")
+          )
+        )
+      ),
+      tabPanel("Congressional",
+        sidebarLayout(
+          sidebarPanel(
+            selectInput("trends_cg_district",
+                        label = h4("District"),
+                        choices = sort(unique(cg_long$district_cg)))
+          ),
+          mainPanel(
+            plotOutput("registration_cg")
+          )
+        )
+      ),
+      tabPanel("State Senate",
+        sidebarLayout(
+          sidebarPanel(
+            selectInput("trends_ks_district",
+                        label = h4("District"),
+                        choices = sort(unique(ks_long$district_ks)))
+          ),
+          mainPanel(
+            plotOutput("registration_ks")
+          )
+        )
+      ),
+      tabPanel("State House",
+        sidebarLayout(
+          sidebarPanel(
+            selectInput("trends_kr_district",
+                        label = h4("District"),
+                        choices = sort(unique(kr_long$district_kr)))
+          ),
+          mainPanel(
+            plotOutput("registration_kr")
+          )
+        )
+      )
+    ),
+    
     tabPanel("General Election Turnout",
              sidebarLayout(
                sidebarPanel(
@@ -114,7 +170,7 @@ ui <- fluidPage(
                  )
                )),
     
-    tabPanel("Full Election History",
+    tabPanel("Election History",
              mainPanel(
                dataTableOutput("candidate_history"),
                em("Source: Kansas Secretary of State 
@@ -198,7 +254,7 @@ ui <- fluidPage(
                                2011-2015 5-Year Estimates")
                           ))
                         ),
-               tabPanel("SLDU",
+               tabPanel("State Senate",
                         sidebarLayout(
                           sidebarPanel(
                             selectInput(
@@ -223,7 +279,7 @@ ui <- fluidPage(
                                2011-2015 5-Year Estimates")
                           ))
                         ),
-               tabPanel("SLDL",
+               tabPanel("State House",
                         sidebarLayout(
                           sidebarPanel(
                             selectInput(
@@ -378,6 +434,63 @@ server <- function(input, output) {
       rownames = NULL, extensions="Buttons", 
       colnames = c("Party", "Candidate", "Votes", "Proportion"))
     )
+  
+  ## REGISTRATION TRENDS
+  # county
+  output$registration_county <- renderPlot(
+    ggplot(county_long[county_long$county == input$trends_county, ], 
+         aes(x = date, y = count, color = desc_party)) +
+    geom_point() +
+    geom_line() +
+    scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                  Libertarian = "green", Unaffiliated = "grey"),
+                       name = NULL) +
+    labs(x = "Date", y = "Number of Registered Voters") +
+    theme_minimal() +
+    theme(legend.position = "top", text = element_text(size = 20))
+  )
+  
+  # congressional
+  output$registration_cg <- renderPlot(
+    ggplot(cg_long[cg_long$district_cg == input$trends_cg_district, ], 
+           aes(x = date, y = count, color = desc_party)) +
+      geom_point() +
+      geom_line() +
+      scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                    Libertarian = "green", Unaffiliated = "grey"),
+                         name = NULL) +
+      labs(x = "Date", y = "Number of Registered Voters") +
+      theme_minimal() +
+      theme(legend.position = "top", text = element_text(size = 20))
+  )
+  
+  # kansas senate
+  output$registration_ks <- renderPlot(
+    ggplot(ks_long[ks_long$district_ks == input$trends_ks_district, ], 
+           aes(x = date, y = count, color = desc_party)) +
+      geom_point() +
+      geom_line() +
+      scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                    Libertarian = "green", Unaffiliated = "grey"),
+                         name = NULL) +
+      labs(x = "Date", y = "Number of Registered Voters") +
+      theme_minimal() +
+      theme(legend.position = "top", text = element_text(size = 20))
+  )
+  
+  # kansas house
+  output$registration_kr <- renderPlot(
+    ggplot(kr_long[kr_long$district_kr == input$trends_kr_district, ], 
+           aes(x = date, y = count, color = desc_party)) +
+      geom_point() +
+      geom_line() +
+      scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
+                                    Libertarian = "green", Unaffiliated = "grey"),
+                         name = NULL) +
+      labs(x = "Date", y = "Number of Registered Voters") +
+      theme_minimal() +
+      theme(legend.position = "top", text = element_text(size = 20))
+  )
   
   ## GENERAL ELECTION TURNOUT
   # turnout table
@@ -552,7 +665,7 @@ server <- function(input, output) {
           spread(col, Value) %>% 
           select(-Variable) %>% 
           mutate(sldu = sort(as.numeric(gsub("[^0-9]", "", sldu)))) %>% 
-          set_names(c("SLDU District", colnames(.)[-1])) %>% 
+          set_names(c("State Senate District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       } else if (input$sldu_type == "Totals") {
         sldu_totals %>% 
@@ -560,7 +673,7 @@ server <- function(input, output) {
           spread(col, Value) %>% 
           select(-Variable) %>% 
           mutate(sldu = sort(as.numeric(gsub("[^0-9]", "", sldu)))) %>% 
-          set_names(c("SLDU District", colnames(.)[-1])) %>% 
+          set_names(c("State Senate District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
     }, options = list(
@@ -578,7 +691,7 @@ server <- function(input, output) {
           spread(col, Value) %>% 
           select(-Variable) %>% 
           mutate(sldl = sort(as.numeric(gsub("[^0-9]", "", sldl)))) %>% 
-          set_names(c("SLDL District", colnames(.)[-1])) %>% 
+          set_names(c("State House District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       } else if (input$sldl_type == "Totals") {
         sldl_totals %>% 
@@ -586,7 +699,7 @@ server <- function(input, output) {
           spread(col, Value) %>% 
           select(-Variable) %>% 
           mutate(sldl = sort(as.numeric(gsub("[^0-9]", "", sldl)))) %>% 
-          set_names(c("SLDL District", colnames(.)[-1])) %>% 
+          set_names(c("State House District", colnames(.)[-1])) %>% 
           `[<-`(TRUE, -1, round(.[, -1], 3))
       }
     }, options = list(
