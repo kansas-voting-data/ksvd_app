@@ -339,11 +339,9 @@ ui <- fluidPage(
                            each variable."),
                         br(),
                         br(),
-                        em("If you would like to see more detailed numbers,
-                           finer-grained cross-tabulations, or have any
-                           questions, you can email us at this@email.com or 
-                           visit factfinder.census.gov to explore the data,
-                           based on the table names given below."),
+                        em("You may visit factfinder.census.gov and use the
+                            table names given below to learn more 
+                            about the data."),
                         h3("Cash Assistance/SNAP"),
                         p("Number of households (i.e., total numbers refer to 
                           households, not people) with cash public assistance or 
@@ -358,7 +356,7 @@ ui <- fluidPage(
                         h3("Disability"),
                         p("Population with a disability. The ACS defines
                           disability with three questions that all aim to
-                          identify limitations in basic reas of functioning and
+                          identify limitations in basic areas of functioning and
                           independent living. It includes any physical, mental,
                           or emotional condition that makes it difficult to
                           concentrate, remember, make decisions, see, hear,
