@@ -69,8 +69,8 @@ ui <- fluidPage(
                  p("Select the type of election (general or primary), year, and 
                    race by using the drop-down menus above. The figure 
                    shows the proportion of votes that the candidate received; 
-                   the size of the rectangle refers to the size of the 
-                   candidate's share of the vote. The table lists votes—and vote
+                   the height of the bars represent the candidate's share 
+                   of the vote. The table lists votes—and vote
                    proportions—for the figure. For primaries, all proportions
                    are within-party."),
                  em("R = Republican, D = Democrat,"),
@@ -92,7 +92,7 @@ ui <- fluidPage(
             selectInput("trends_county",
                         label = h4("County"),
                         choices = sort(unique(county_long$county))),
-            p("Select county of interest by using the drop-down menu above.
+            p("Select the county of interest by using the drop-down menu above.
               The line graph to the right shows the number of registered
               voters in that county, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
@@ -110,8 +110,8 @@ ui <- fluidPage(
             selectInput("trends_cg_district",
                         label = h4("District"),
                         choices = sort(unique(cg_long$district_cg))),
-            p("Select district of interest by using the drop-down menu above.
-              The line graph to the right shows the number of registered
+            p("Select the district of interest by using the drop-down menu 
+              above. The line graph to the right shows the number of registered
               voters in that district, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
               and exactly how many voters were registered with that party.")
@@ -128,8 +128,8 @@ ui <- fluidPage(
             selectInput("trends_ks_district",
                         label = h4("District"),
                         choices = sort(unique(ks_long$district_ks))),
-            p("Select district of interest by using the drop-down menu above.
-              The line graph to the right shows the number of registered
+            p("Select the district of interest by using the drop-down menu 
+              above. The line graph to the right shows the number of registered
               voters in that district, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
               and exactly how many voters were registered with that party.")
@@ -146,8 +146,8 @@ ui <- fluidPage(
             selectInput("trends_kr_district",
                         label = h4("District"),
                         choices = sort(unique(kr_long$district_kr))),
-            p("Select district of interest by using the drop-down menu above.
-              The line graph to the right shows the number of registered
+            p("Select the district of interest by using the drop-down menu 
+              above. The line graph to the right shows the number of registered
               voters in that district, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
               and exactly how many voters were registered with that party.")
@@ -181,12 +181,14 @@ ui <- fluidPage(
                  p("The figure is a density plot; it
                    shows us how common is each value of the variable of 
                    interest. The higher the curve, and thus more blue area under
-                   the curve, the more common the value is. The dotted vertical
+                   the curve, the more common is the value. The dotted vertical
                    line is the county that you select above. This helps you see
                    how that county compares to other counties. If the vertical
                    line is in the tall area under the curve, it is similar to
                    other counties. If it is far to the right, then it has a much
-                   higher value than most other counties.")
+                   higher value than most other counties; if it is far to the
+                   left, then it has a much lower value than most other 
+                   counties.")
                  ),
                mainPanel(
                  dataTableOutput("turnout_table"),
@@ -350,7 +352,7 @@ ui <- fluidPage(
                         p("Citizenship and nativity. \"Not\" refers to not being
                           a citizen. If people are a citizen, nativity is broken
                           into: born in the United States, born in Peurto Rico 
-                          or U.S. island Areas, born abroad of American 
+                          or U.S. Island Areas, born abroad of American 
                           parent(s), and citizen by naturalization. Table 
                           B05001."),
                         h3("Disability"),
@@ -373,10 +375,10 @@ ui <- fluidPage(
                           B27001."),
                         h3("Language at Home"),
                         p("Population of people 5 years or older who speak a
-                          language—other than English—at homesometimes or often.
-                          If people speak multiple at home, they were asked to
-                          write down the language they speak most often. 
-                          Table B16007."),
+                          language—other than English—at home sometimes or 
+                          often. If people speak multiple at home, they were 
+                          asked to write down the language they speak most 
+                          often. Table B16007."),
                         h3("Poverty"),
                         p("Population living below the poverty level (i.e.,
                           Below 100%), at the poverty level to 1.49 times the
