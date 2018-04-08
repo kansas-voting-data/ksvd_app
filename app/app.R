@@ -544,7 +544,7 @@ server <- function(input, output) {
           `Registered Voters` = registered_voters,
           `Total Votes Cast` = total_votes_cast,
           `Turnout Proportion` = prop_turnout,
-          `Advance Votes Cast` = prop_votes_advance,
+          `Advance Votes Cast` = advance_votes,
           `Proportion of Votes Advance` = prop_votes_advance,
           `Provisional Votes Cast` = provisional_votes,
           `Proportion of Votes Provisional` = prop_votes_provisional
