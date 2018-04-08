@@ -351,7 +351,7 @@ ui <- fluidPage(
                         h3("Citizen"),
                         p("Citizenship and nativity. \"Not\" refers to not being
                           a citizen. If people are a citizen, nativity is broken
-                          into: born in the United States, born in Peurto Rico 
+                          into: born in the United States, born in Puerto Rico 
                           or U.S. Island Areas, born abroad of American 
                           parent(s), and citizen by naturalization. Table 
                           B05001."),
