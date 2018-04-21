@@ -492,11 +492,14 @@ server <- function(input, output) {
       ggplot(county_long[county_long$county == input$trends_county, ], 
              aes(x = date, y = count / 1000, 
                  color = desc_party, group = desc_party,
-                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+                 text = paste(
+                   "<br>Date:", as.Date(date), '<br>Voters:', count
+                  ))) +
         geom_point() +
         geom_line() +
         scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                      Libertarian = "green", Unaffiliated = "grey"),
+                                      Libertarian = "green", 
+                                      Unaffiliated = "grey"),
                            name = NULL) +
         labs(x = "Date", y = "Registered Voters (in Thousands)") +
         theme_minimal() +
@@ -514,11 +517,14 @@ server <- function(input, output) {
       ggplot(cg_long[cg_long$district_cg == input$trends_cg_district, ], 
              aes(x = date, y = count / 1000, 
                  color = desc_party, group = desc_party,
-                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+                 text = paste(
+                   "<br>Date:", as.Date(date), '<br>Voters:', count
+                 ))) +
         geom_point() +
         geom_line() +
         scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                      Libertarian = "green", Unaffiliated = "grey"),
+                                      Libertarian = "green", 
+                                      Unaffiliated = "grey"),
                            name = NULL) +
         labs(x = "Date", y = "Registered Voters (in Thousands)") +
         theme_minimal() +
@@ -536,11 +542,14 @@ server <- function(input, output) {
       ggplot(ks_long[ks_long$district_ks == input$trends_ks_district, ], 
              aes(x = date, y = count / 1000, 
                  color = desc_party, group = desc_party,
-                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+                 text = paste(
+                   "<br>Date:", as.Date(date), '<br>Voters:', count
+                 ))) +
         geom_point() +
         geom_line() +
         scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                      Libertarian = "green", Unaffiliated = "grey"),
+                                      Libertarian = "green", 
+                                      Unaffiliated = "grey"),
                            name = NULL) +
         labs(x = "Date", y = "Registered Voters (in Thousands)") +
         theme_minimal() +
@@ -558,11 +567,14 @@ server <- function(input, output) {
       ggplot(kr_long[kr_long$district_kr == input$trends_kr_district, ], 
              aes(x = date, y = count / 1000, 
                  color = desc_party, group = desc_party,
-                 text = paste("<br>Date:", as.Date(date), '<br>Voters:', count))) +
+                 text = paste(
+                   "<br>Date:", as.Date(date), '<br>Voters:', count
+                 ))) +
         geom_point() +
         geom_line() +
         scale_color_manual(values = c(Democratic = "blue", Republican = "red", 
-                                      Libertarian = "green", Unaffiliated = "grey"),
+                                      Libertarian = "green", 
+                                      Unaffiliated = "grey"),
                            name = NULL) +
         labs(x = "Date", y = "Registered Voters (in Thousands)") +
         theme_minimal() +
@@ -795,7 +807,6 @@ server <- function(input, output) {
       dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE, scrollY = "450px"),
     extensions = "Buttons", rownames = FALSE)
   )
-  
 }
 
 shinyApp(ui = ui, server = server)
