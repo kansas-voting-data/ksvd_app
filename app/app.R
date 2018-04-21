@@ -1,3 +1,4 @@
+# global -----------------------------------------------------------------------
 library(shiny)
 library(tidyverse)
 library(ggplot2)
@@ -38,6 +39,7 @@ turnout_variable_choices <- c(
   "Proportion of Votes Provisional" = "prop_votes_provisional"
 )
 
+# ui ---------------------------------------------------------------------------
 ui <- fluidPage(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", 
@@ -46,6 +48,8 @@ ui <- fluidPage(
 
   navbarPage(title = "Kansas Voting Data", windowTitle = "Kansas Voting Data", 
              fluid = FALSE,
+             
+# election results --------------------------------------------------------------
     tabPanel("Election Results",
              sidebarLayout(
                sidebarPanel(
@@ -79,7 +83,8 @@ ui <- fluidPage(
                    Office Election Statistics")
                  )
                )),
-    
+
+# registration trends ----------------------------------------------------------    
     navbarMenu("Registration Trends",
       tabPanel("County",
         sidebarLayout(
@@ -154,7 +159,8 @@ ui <- fluidPage(
         )
       )
     ),
-    
+
+# election turnout -------------------------------------------------------------    
     tabPanel("Election Turnout",
              sidebarLayout(
                sidebarPanel(
@@ -192,7 +198,8 @@ ui <- fluidPage(
                  plotOutput("density_turnout")
                  )
                )),
-    
+
+# election history -------------------------------------------------------------    
     tabPanel("Election History",
              mainPanel(
                dataTableOutput("candidate_history"),
@@ -200,7 +207,8 @@ ui <- fluidPage(
                    Office Election Statistics"),
                width = 12
                )),
-    
+
+# demographics -----------------------------------------------------------------    
     navbarMenu("Demographics",
                tabPanel("State",
                         sidebarLayout(
@@ -381,6 +389,8 @@ ui <- fluidPage(
                           1.5 times the poverty level (i.e., 150%). Table 
                           B06012.")
                )),
+
+# tutorial ---------------------------------------------------------------------
     tabPanel("Tutorial",
       HTML(
         "<iframe 
