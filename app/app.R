@@ -1,4 +1,5 @@
 # global -----------------------------------------------------------------------
+source("helpers.R")
 library(shiny)
 library(tidyverse)
 library(ggplot2)
@@ -96,7 +97,8 @@ ui <- fluidPage(
               The line graph to the right shows the number of registered
               voters in that county, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
-              and exactly how many voters were registered with that party.")
+              and exactly how many voters were registered with that party."),
+            uiOutput("registration_county_map")
           ),
           mainPanel(
             plotlyOutput("registration_county"),
@@ -114,7 +116,8 @@ ui <- fluidPage(
               above. The line graph to the right shows the number of registered
               voters in that district, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
-              and exactly how many voters were registered with that party.")
+              and exactly how many voters were registered with that party."),
+            uiOutput("registration_congressional_map")
           ),
           mainPanel(
             plotlyOutput("registration_cg"),
@@ -132,7 +135,8 @@ ui <- fluidPage(
               above. The line graph to the right shows the number of registered
               voters in that district, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
-              and exactly how many voters were registered with that party.")
+              and exactly how many voters were registered with that party."),
+            uiOutput("registration_sldu_map")
           ),
           mainPanel(
             plotlyOutput("registration_ks"),
@@ -150,7 +154,8 @@ ui <- fluidPage(
               above. The line graph to the right shows the number of registered
               voters in that district, broken up by party, over time. You can
               hover over any point to see the exact date of the voter file
-              and exactly how many voters were registered with that party.")
+              and exactly how many voters were registered with that party."),
+            uiOutput("registration_sldl_map")
           ),
           mainPanel(
             plotlyOutput("registration_kr"),
@@ -252,7 +257,8 @@ ui <- fluidPage(
                               interested in, as well as whether you would like
                               to see proportions or totals. For a look into
                               what the variables mean, see the Variable
-                              Definitions tab under Demographics.")
+                              Definitions tab under Demographics."),
+                            uiOutput("demo_county_map")
                           ),
                           mainPanel(
                             dataTableOutput("county_demographics"),
@@ -277,7 +283,8 @@ ui <- fluidPage(
                               interested in, as well as whether you would like
                               to see proportions or totals. For a look into
                               what the variables mean, see the Variable
-                              Definitions tab under Demographics.")
+                              Definitions tab under Demographics."),
+                            uiOutput("demo_congressional_map")
                           ),
                           mainPanel(
                             dataTableOutput("congress_demographics"),
@@ -405,9 +412,10 @@ ui <- fluidPage(
   )
 )
 
+# server -----------------------------------------------------------------------
 server <- function(input, output) {
   
-  ## ELECTION RESULTS
+  # election results server ----------------------------------------------------
   # election results bar plot
   output$results_plot <- renderPlot({
     results_dat <- results %>% 
@@ -477,7 +485,7 @@ server <- function(input, output) {
       colnames = c("Party", "Candidate", "Votes", "Proportion"))
     )
   
-  ## REGISTRATION TRENDS
+  # registration trends server -------------------------------------------------
   # county
   output$registration_county <- renderPlotly(
     ggplotly(
@@ -495,6 +503,9 @@ server <- function(input, output) {
         theme(legend.position = "top", text = element_text(size = 16)),
       tooltip = "text"
     )
+  )
+  output$registration_county_map <- renderUI(
+    map_link("county")
   )
   
   # congressional
@@ -515,6 +526,9 @@ server <- function(input, output) {
       tooltip = "text"
     )
   )
+  output$registration_congressional_map <- renderUI(
+    map_link("congressional")
+  )
   
   # kansas senate
   output$registration_ks <- renderPlotly(
@@ -533,6 +547,9 @@ server <- function(input, output) {
         theme(legend.position = "top", text = element_text(size = 16)),
       tooltip = "text"
     )
+  )
+  output$registration_sldu_map <- renderUI(
+    map_link("sldu", input$trends_ks_district)
   )
   
   # kansas house
@@ -553,8 +570,11 @@ server <- function(input, output) {
       tooltip = "text"
     )
   )
+  output$registration_sldl_map <- renderUI(
+    map_link("sldl", input$trends_kr_district)
+  )
   
-  ## GENERAL ELECTION TURNOUT
+  # election turnout server ----------------------------------------------------
   # turnout table
   output$turnout_table <- renderDataTable(
     datatable({
@@ -623,7 +643,7 @@ server <- function(input, output) {
     }
   })
   
-  ## ELECTION HISTORY
+  # election history server ----------------------------------------------------
   # election history table
   output$candidate_history <- renderDataTable(
     datatable(
@@ -638,7 +658,7 @@ server <- function(input, output) {
     )
   )
   
-  ## DEMOGRAPHICS, STATE
+  # demographics, state, server ------------------------------------------------
   output$state_demographics <- renderDataTable(
     datatable({
       if (input$state_type == "Proportions") {
@@ -664,7 +684,7 @@ server <- function(input, output) {
     extensions = "Buttons", rownames = FALSE)
   )
   
-  ## DEMOGRAPHICS, COUNTY
+  # demographics, county, server -----------------------------------------------
   output$county_demographics <- renderDataTable(
     datatable({
       if (input$county_type == "Proportions") {
@@ -687,8 +707,11 @@ server <- function(input, output) {
       dom = "Bfrtip", scrollX = TRUE, bInfo = FALSE, scrollY = "450px"),
     extensions = "Buttons", rownames = FALSE)
   )
+  output$demo_county_map <- renderUI(
+    map_link("county")
+  )
   
-  ## DEMOGRAPHICS, CONGRESSIONAL
+  # demographics, congressional, server ----------------------------------------
   output$congress_demographics <- renderDataTable(
     datatable({
       if (input$congress_type == "Proportions") {
@@ -717,8 +740,11 @@ server <- function(input, output) {
     ),
     extensions = "Buttons", rownames = FALSE)
   )
+  output$demo_congressional_map <- renderUI(
+    map_link("congressional")
+  )
   
-  ## DEMOGRAPHICS, SLDU
+  # demographics, sldu, server -------------------------------------------------
   output$sldu_demographics <- renderDataTable(
     datatable({
       if (input$sldu_type == "Proportions") {
@@ -744,7 +770,7 @@ server <- function(input, output) {
     extensions = "Buttons", rownames = FALSE)
   )
   
-  ## DEMOGRAPHICS, SLDL
+  # demographics, sldl, server -------------------------------------------------
   output$sldl_demographics <- renderDataTable(
     datatable({
       if (input$sldl_type == "Proportions") {
