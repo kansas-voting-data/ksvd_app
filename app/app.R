@@ -155,7 +155,7 @@ ui <- fluidPage(
       )
     ),
     
-    tabPanel("General Election Turnout",
+    tabPanel("Election Turnout",
              sidebarLayout(
                sidebarPanel(
                  selectInput("turnout_year",
@@ -380,9 +380,20 @@ ui <- fluidPage(
                           poverty level (i.e., 100% to 149%), and at or above 
                           1.5 times the poverty level (i.e., 150%). Table 
                           B06012.")
-               ))
+               )),
+    tabPanel("Tutorial",
+      HTML(
+        "<iframe 
+        width=\"560\" 
+        height=\"315\"
+        src=\"https://www.youtube.com/embed/OzHCFvBdN0Y?rel=0\" 
+        frameborder=\"0\" 
+        allow=\"autoplay; encrypted-media\" allowfullscreen>
+        </iframe>"
+      )
     )
   )
+)
 
 server <- function(input, output) {
   
